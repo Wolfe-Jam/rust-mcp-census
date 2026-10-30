@@ -195,7 +195,7 @@ Marked deprecated in the registry, so not counted above.
 - **What it does** is each author's own description from the registry, unedited.
 - **Stars** are shown, not ranked. Nothing here judges a server.
 - **Data:** [`data/2026-10-30.json`](data/2026-10-30.json) and [`data/2026-10-30.csv`](data/2026-10-30.csv). Every run gets its own snapshot; none is overwritten.
-- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week, with the User-Agent `rust-mcp-census`.
+- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week (Sundays, 23:00 UTC, by [a GitHub Action](.github/workflows/weekly.yml)), with the User-Agent `rust-mcp-census`.
 - Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).
 
 ## Background

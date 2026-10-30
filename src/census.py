@@ -183,7 +183,7 @@ def readme(snap):
             "- **What it does** is each author's own description from the registry, unedited.",
             "- **Stars** are shown, not ranked. Nothing here judges a server.",
             f"- **Data:** [`data/{snap['date']}.json`](data/{snap['date']}.json) and [`data/{snap['date']}.csv`](data/{snap['date']}.csv). Every run gets its own snapshot; none is overwritten.",
-            "- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week, with the User-Agent `rust-mcp-census`.",
+            "- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week (Sundays, 23:00 UTC, by [a GitHub Action](.github/workflows/weekly.yml)), with the User-Agent `rust-mcp-census`.",
             "- Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).", "",
             "## Background", "",
             "[An MCP Story about Rust](https://wolfejam.dev/blog/rust-mcp-story): how cargo got into the registry.", ""]
