@@ -1,19 +1,21 @@
 {
  "date": "2026-10-30",
- "registry_servers": 52976,
+ "registry_servers": 53020,
+ "registry_active": 52322,
  "package_types": {
-  "npm": 14307,
-  "pypi": 4924,
-  "mcpb": 1525,
+  "npm": 14313,
+  "pypi": 4927,
+  "mcpb": 1526,
   "oci": 1279,
   "nuget": 165,
-  "cargo": 105
+  "cargo": 106
  },
  "cargo_live": "2026-07-13",
  "servers": [
   {
    "name": "io.github.VoidNullable/lific",
    "version": "2.11.1",
+   "status": "active",
    "first_cargo": "2026-07-13",
    "packages": "cargo",
    "crate": "lific",
@@ -26,6 +28,7 @@
   {
    "name": "io.github.ltspace/dowse",
    "version": "0.10.0",
+   "status": "active",
    "first_cargo": "2026-07-14",
    "packages": "cargo",
    "crate": "dowse",
@@ -38,6 +41,7 @@
   {
    "name": "io.github.ojhermann-org/ferric-fred-mcp",
    "version": "0.3.11",
+   "status": "active",
    "first_cargo": "2026-07-14",
    "packages": "cargo",
    "crate": "ferric-fred-mcp",
@@ -50,6 +54,7 @@
   {
    "name": "io.github.Liohtml/matomo-mcp",
    "version": "0.1.4",
+   "status": "active",
    "first_cargo": "2026-07-17",
    "packages": "cargo+oci",
    "crate": "matomo-mcp",
@@ -62,6 +67,7 @@
   {
    "name": "io.github.Liohtml/sistrix-mcp",
    "version": "0.1.1",
+   "status": "active",
    "first_cargo": "2026-07-17",
    "packages": "cargo+oci",
    "crate": "sistrix-mcp",
@@ -74,6 +80,7 @@
   {
    "name": "io.github.Wolfe-Jam/rust-faf-mcp",
    "version": "0.3.1",
+   "status": "deprecated",
    "first_cargo": "2026-07-17",
    "packages": "cargo",
    "crate": "rust-faf-mcp",
@@ -86,6 +93,7 @@
   {
    "name": "io.github.singhpratech/notepatra-mcp",
    "version": "0.1.119",
+   "status": "active",
    "first_cargo": "2026-07-18",
    "packages": "cargo",
    "crate": "notepatra-mcp",
@@ -98,6 +106,7 @@
   {
    "name": "one.faf/rust-faf-mcp",
    "version": "0.8.3",
+   "status": "active",
    "first_cargo": "2026-07-18",
    "packages": "cargo+npm",
    "crate": "rust-faf-mcp",
@@ -110,6 +119,7 @@
   {
    "name": "io.github.brechanbech/sec-mcp",
    "version": "0.10.0",
+   "status": "active",
    "first_cargo": "2026-07-19",
    "packages": "cargo",
    "crate": "sec-mcp",
@@ -122,6 +132,7 @@
   {
    "name": "io.github.brechanbech/xojo-mcp",
    "version": "3.7.1",
+   "status": "active",
    "first_cargo": "2026-07-19",
    "packages": "cargo",
    "crate": "xojo-mcp",
@@ -134,6 +145,7 @@
   {
    "name": "io.github.patchloom/patchloom",
    "version": "0.37.6",
+   "status": "active",
    "first_cargo": "2026-07-20",
    "packages": "cargo+npm",
    "crate": "patchloom",
@@ -146,6 +158,7 @@
   {
    "name": "io.github.lacs-project/sysknife",
    "version": "0.29.0",
+   "status": "active",
    "first_cargo": "2026-07-28",
    "packages": "cargo",
    "crate": "sysknife-cli",
@@ -158,6 +171,7 @@
   {
    "name": "io.github.protostatis/unbrowser",
    "version": "0.0.21",
+   "status": "active",
    "first_cargo": "2026-07-28",
    "packages": "cargo+pypi",
    "crate": "unbrowser",
@@ -170,6 +184,7 @@
   {
    "name": "io.github.Wolfe-Jam/mcp-better",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-07-29",
    "packages": "cargo+npm",
    "crate": "mcp-better",
@@ -182,6 +197,7 @@
   {
    "name": "io.github.klNuno/fast-mcp-ssh",
    "version": "0.5.1",
+   "status": "active",
    "first_cargo": "2026-07-29",
    "packages": "cargo",
    "crate": "fast-mcp-ssh",
@@ -194,6 +210,7 @@
   {
    "name": "io.github.Mapika/portview",
    "version": "2.1.0",
+   "status": "active",
    "first_cargo": "2026-07-31",
    "packages": "cargo",
    "crate": "portview",
@@ -206,6 +223,7 @@
   {
    "name": "io.github.marcomq/mq-bridge-app",
    "version": "1.0.2",
+   "status": "deprecated",
    "first_cargo": "2026-07-31",
    "packages": "cargo+oci",
    "crate": "mq-bridge-app",
@@ -218,6 +236,7 @@
   {
    "name": "io.github.morluto/leantoken",
    "version": "0.1.28",
+   "status": "active",
    "first_cargo": "2026-08-01",
    "packages": "cargo",
    "crate": "leantoken",
@@ -230,6 +249,7 @@
   {
    "name": "io.github.smbcloudXYZ/xcrs",
    "version": "0.7.5",
+   "status": "active",
    "first_cargo": "2026-08-02",
    "packages": "cargo",
    "crate": "xcrs",
@@ -242,6 +262,7 @@
   {
    "name": "io.github.koshak01/tidex6-mcp-local",
    "version": "2.18.0",
+   "status": "active",
    "first_cargo": "2026-08-05",
    "packages": "cargo",
    "crate": "tidex6-mcp-local",
@@ -254,6 +275,7 @@
   {
    "name": "io.github.mahabubul470/gpp",
    "version": "0.2.2",
+   "status": "active",
    "first_cargo": "2026-08-05",
    "packages": "cargo",
    "crate": "gpp-cli",
@@ -266,6 +288,7 @@
   {
    "name": "io.github.aurumflux20/effectfence",
    "version": "0.3.0",
+   "status": "active",
    "first_cargo": "2026-08-06",
    "packages": "cargo+npm",
    "crate": "effectfence",
@@ -278,6 +301,7 @@
   {
    "name": "io.github.tenequm/pond",
    "version": "0.14.5",
+   "status": "active",
    "first_cargo": "2026-08-07",
    "packages": "cargo",
    "crate": "pond-db",
@@ -290,6 +314,7 @@
   {
    "name": "io.github.MauricioPerera/kite-lite",
    "version": "0.1.3",
+   "status": "active",
    "first_cargo": "2026-08-08",
    "packages": "cargo",
    "crate": "kite-lite",
@@ -302,6 +327,7 @@
   {
    "name": "io.github.NexQL-OSS/nexql-mcp",
    "version": "0.2.4",
+   "status": "active",
    "first_cargo": "2026-08-08",
    "packages": "cargo+npm",
    "crate": "nexql-mcp",
@@ -314,6 +340,7 @@
   {
    "name": "io.github.sandbanks/agentic_ssh",
    "version": "0.6.0",
+   "status": "active",
    "first_cargo": "2026-08-09",
    "packages": "cargo",
    "crate": "agentic_ssh",
@@ -326,6 +353,7 @@
   {
    "name": "io.github.asanabrial/leteo",
    "version": "0.4.2",
+   "status": "active",
    "first_cargo": "2026-08-11",
    "packages": "cargo+npm",
    "crate": "leteo",
@@ -338,6 +366,7 @@
   {
    "name": "io.github.deed-lang/deed",
    "version": "0.2.13",
+   "status": "active",
    "first_cargo": "2026-08-14",
    "packages": "cargo",
    "crate": "deed-lang",
@@ -350,6 +379,7 @@
   {
    "name": "io.github.verivus-oss/sqry",
    "version": "33.0.1",
+   "status": "active",
    "first_cargo": "2026-08-19",
    "packages": "cargo+oci",
    "crate": "sqry-mcp",
@@ -362,6 +392,7 @@
   {
    "name": "io.github.tombaldwin/ebman",
    "version": "0.48.0",
+   "status": "active",
    "first_cargo": "2026-08-21",
    "packages": "cargo",
    "crate": "ebman",
@@ -374,6 +405,7 @@
   {
    "name": "io.github.nhatvu148/video-transcriber-mcp",
    "version": "0.10.6",
+   "status": "active",
    "first_cargo": "2026-08-23",
    "packages": "cargo",
    "crate": "video-transcriber-mcp",
@@ -386,6 +418,7 @@
   {
    "name": "io.github.ojuschugh1/sqz",
    "version": "2.1.1",
+   "status": "active",
    "first_cargo": "2026-08-23",
    "packages": "cargo",
    "crate": "sqz-mcp",
@@ -398,6 +431,7 @@
   {
    "name": "io.github.oxyplay/wyd",
    "version": "0.10.0",
+   "status": "active",
    "first_cargo": "2026-08-26",
    "packages": "cargo",
    "crate": "wyd",
@@ -410,6 +444,7 @@
   {
    "name": "io.github.QAtlasHub/doiget",
    "version": "0.9.0",
+   "status": "active",
    "first_cargo": "2026-08-27",
    "packages": "cargo+mcpb",
    "crate": "doiget-cli",
@@ -422,6 +457,7 @@
   {
    "name": "io.github.husk-security/husk",
    "version": "0.1.2",
+   "status": "active",
    "first_cargo": "2026-08-27",
    "packages": "cargo+npm",
    "crate": "husk-sec",
@@ -434,6 +470,7 @@
   {
    "name": "io.github.MatthewSherlin/mushroomdb",
    "version": "0.9.4",
+   "status": "active",
    "first_cargo": "2026-08-28",
    "packages": "cargo+npm",
    "crate": "mushroomdb-cli",
@@ -446,6 +483,7 @@
   {
    "name": "io.github.underpass-ai/kmp",
    "version": "0.24.0",
+   "status": "active",
    "first_cargo": "2026-08-28",
    "packages": "cargo+mcpb",
    "crate": "kmp-mcp",
@@ -458,6 +496,7 @@
   {
    "name": "io.github.joshiii-xyz/basalt",
    "version": "0.1.6",
+   "status": "active",
    "first_cargo": "2026-09-02",
    "packages": "cargo",
    "crate": "basalt-db",
@@ -470,6 +509,7 @@
   {
    "name": "io.github.AbduljabbarBXR/cornea",
    "version": "0.2.2",
+   "status": "active",
    "first_cargo": "2026-09-04",
    "packages": "cargo",
    "crate": "cornea",
@@ -482,6 +522,7 @@
   {
    "name": "si.sigit/cli",
    "version": "1.3.0",
+   "status": "active",
    "first_cargo": "2026-09-04",
    "packages": "cargo",
    "crate": "sigit-si-cli",
@@ -494,6 +535,7 @@
   {
    "name": "io.github.adrianov/abcop",
    "version": "0.23.0",
+   "status": "active",
    "first_cargo": "2026-09-05",
    "packages": "cargo",
    "crate": "abcop",
@@ -506,6 +548,7 @@
   {
    "name": "io.github.adrianov/rrubocop",
    "version": "0.8.17",
+   "status": "active",
    "first_cargo": "2026-09-05",
    "packages": "cargo",
    "crate": "rrubocop",
@@ -518,6 +561,7 @@
   {
    "name": "io.github.ugur-murat-alt/agz-rust-coder",
    "version": "0.2.0",
+   "status": "active",
    "first_cargo": "2026-09-05",
    "packages": "cargo",
    "crate": "agz-rust-coder",
@@ -530,6 +574,7 @@
   {
    "name": "io.github.daffa2555/razor",
    "version": "1.1.1",
+   "status": "active",
    "first_cargo": "2026-09-07",
    "packages": "cargo",
    "crate": "tokenectomy",
@@ -542,6 +587,7 @@
   {
    "name": "io.github.tarides/sudo-proxy",
    "version": "1.2.0",
+   "status": "active",
    "first_cargo": "2026-09-07",
    "packages": "cargo+mcpb",
    "crate": "sudo-proxy",
@@ -554,6 +600,7 @@
   {
    "name": "io.github.4lador/leantime-mcp",
    "version": "2.9.0",
+   "status": "active",
    "first_cargo": "2026-09-08",
    "packages": "cargo",
    "crate": "leantime-mcp",
@@ -566,6 +613,7 @@
   {
    "name": "tech.melodium/melodium-mcp",
    "version": "0.11.0",
+   "status": "active",
    "first_cargo": "2026-09-09",
    "packages": "cargo",
    "crate": "melodium-mcp",
@@ -578,6 +626,7 @@
   {
    "name": "dev.ilien.svipall/mcp",
    "version": "1.3.1",
+   "status": "active",
    "first_cargo": "2026-09-10",
    "packages": "cargo+npm+oci",
    "crate": "svipall",
@@ -590,6 +639,7 @@
   {
    "name": "io.github.ugur-murat-alt/agz-rust-mcp",
    "version": "0.4.0",
+   "status": "active",
    "first_cargo": "2026-09-11",
    "packages": "cargo",
    "crate": "agz-rust-mcp",
@@ -602,6 +652,7 @@
   {
    "name": "io.github.ECD5A/tkach-security",
    "version": "0.1.2",
+   "status": "active",
    "first_cargo": "2026-09-12",
    "packages": "cargo",
    "crate": "tkach-mcp",
@@ -614,6 +665,7 @@
   {
    "name": "io.github.factum-project/factum",
    "version": "0.1.3",
+   "status": "active",
    "first_cargo": "2026-09-14",
    "packages": "cargo",
    "crate": "factum-mcp",
@@ -626,6 +678,7 @@
   {
    "name": "io.github.jolars/deixis",
    "version": "0.2.2",
+   "status": "active",
    "first_cargo": "2026-09-16",
    "packages": "cargo",
    "crate": "deixis",
@@ -638,6 +691,7 @@
   {
    "name": "io.github.gridhra/atx-mcp",
    "version": "0.6.7",
+   "status": "active",
    "first_cargo": "2026-09-17",
    "packages": "cargo+npm+oci",
    "crate": "atx-mcp",
@@ -650,6 +704,7 @@
   {
    "name": "io.github.eabz/tirith",
    "version": "1.2.0",
+   "status": "active",
    "first_cargo": "2026-09-18",
    "packages": "cargo",
    "crate": "tirith-mcp",
@@ -662,6 +717,7 @@
   {
    "name": "io.github.grayclayton/aetre-mcp",
    "version": "0.8.1",
+   "status": "active",
    "first_cargo": "2026-09-19",
    "packages": "cargo+oci",
    "crate": "aetre-mcp",
@@ -674,6 +730,7 @@
   {
    "name": "io.github.croviatrust/causari",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-09-20",
    "packages": "cargo",
    "crate": "causari",
@@ -686,6 +743,7 @@
   {
    "name": "app.mochify/mochify",
    "version": "1.6.2",
+   "status": "active",
    "first_cargo": "2026-09-21",
    "packages": "cargo",
    "crate": "mochify",
@@ -698,6 +756,7 @@
   {
    "name": "io.github.devops-infinity/ownpg",
    "version": "0.1.2",
+   "status": "active",
    "first_cargo": "2026-09-24",
    "packages": "cargo+mcpb",
    "crate": "ownpg",
@@ -710,6 +769,7 @@
   {
    "name": "io.github.naw103/foremerge",
    "version": "0.6.0",
+   "status": "active",
    "first_cargo": "2026-09-24",
    "packages": "cargo",
    "crate": "foremerge",
@@ -722,6 +782,7 @@
   {
    "name": "io.github.damejeras/agentchan",
    "version": "0.1.4",
+   "status": "active",
    "first_cargo": "2026-09-26",
    "packages": "cargo",
    "crate": "agentchan",
@@ -734,6 +795,7 @@
   {
    "name": "io.github.fluxgit-hq/fluxgit-mcp-server",
    "version": "0.2.1",
+   "status": "active",
    "first_cargo": "2026-09-26",
    "packages": "cargo",
    "crate": "fluxgit-mcp-sidecar",
@@ -746,6 +808,7 @@
   {
    "name": "io.github.brechanbech/forgejo-mcp-rs",
    "version": "0.27.0",
+   "status": "active",
    "first_cargo": "2026-09-27",
    "packages": "cargo",
    "crate": "forgejo-mcp-rs",
@@ -758,6 +821,7 @@
   {
    "name": "io.github.harisnopen/diavlos",
    "version": "2.1.1",
+   "status": "active",
    "first_cargo": "2026-09-27",
    "packages": "cargo",
    "crate": "diavlos",
@@ -770,6 +834,7 @@
   {
    "name": "io.github.JAAvila-Of/vivac",
    "version": "0.21.0",
+   "status": "active",
    "first_cargo": "2026-09-28",
    "packages": "cargo",
    "crate": "vivac",
@@ -782,6 +847,7 @@
   {
    "name": "io.github.damejeras/agentgrasp",
    "version": "0.1.0",
+   "status": "active",
    "first_cargo": "2026-10-01",
    "packages": "cargo",
    "crate": "agentgrasp",
@@ -794,6 +860,7 @@
   {
    "name": "io.github.MykytaStel/repopilot",
    "version": "0.25.0",
+   "status": "active",
    "first_cargo": "2026-10-02",
    "packages": "cargo+npm",
    "crate": "repopilot",
@@ -806,6 +873,7 @@
   {
    "name": "io.github.joowani/tree-sitter-mcp-server",
    "version": "0.1.1",
+   "status": "active",
    "first_cargo": "2026-10-02",
    "packages": "cargo+npm",
    "crate": "tree-sitter-mcp-server",
@@ -818,6 +886,7 @@
   {
    "name": "io.github.openreadout/openreadout",
    "version": "0.4.0",
+   "status": "active",
    "first_cargo": "2026-10-03",
    "packages": "cargo+mcpb+npm",
    "crate": "openreadout",
@@ -830,6 +899,7 @@
   {
    "name": "io.github.aleksUIX/pixellint",
    "version": "0.59.0",
+   "status": "active",
    "first_cargo": "2026-10-04",
    "packages": "cargo",
    "crate": "pixellint-mcp",
@@ -842,6 +912,7 @@
   {
    "name": "io.github.craftbag/craftbag-mcp",
    "version": "0.3.1",
+   "status": "active",
    "first_cargo": "2026-10-04",
    "packages": "cargo",
    "crate": "craftbag-mcp",
@@ -854,6 +925,7 @@
   {
    "name": "io.github.Tavrin/saccade",
    "version": "0.3.0",
+   "status": "active",
    "first_cargo": "2026-10-06",
    "packages": "cargo",
    "crate": "saccade",
@@ -866,6 +938,7 @@
   {
    "name": "io.github.yrangana/fm-mcp",
    "version": "0.1.3",
+   "status": "active",
    "first_cargo": "2026-10-10",
    "packages": "cargo",
    "crate": "fm-mcp",
@@ -878,6 +951,7 @@
   {
    "name": "io.github.moreno-omar/mcp-obsidian",
    "version": "0.1.0",
+   "status": "active",
    "first_cargo": "2026-10-11",
    "packages": "cargo",
    "crate": "mcp-obsidian",
@@ -890,6 +964,7 @@
   {
    "name": "io.github.nrupala/codetopo",
    "version": "0.7.0",
+   "status": "active",
    "first_cargo": "2026-10-11",
    "packages": "cargo",
    "crate": "codetopo-mcp",
@@ -902,6 +977,7 @@
   {
    "name": "io.github.smbcloudXYZ/ascapi",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-11",
    "packages": "cargo",
    "crate": "smbcloud-ascapi-cli",
@@ -914,6 +990,7 @@
   {
    "name": "io.github.scrapertweeter3-prog/flatrate-math",
    "version": "0.1.1",
+   "status": "active",
    "first_cargo": "2026-10-12",
    "packages": "cargo",
    "crate": "flatrate-math",
@@ -926,6 +1003,7 @@
   {
    "name": "io.github.Blackcat-Informatics/purrassist",
    "version": "0.1.0",
+   "status": "active",
    "first_cargo": "2026-10-13",
    "packages": "cargo",
    "crate": "purrassist-cli",
@@ -938,6 +1016,7 @@
   {
    "name": "io.github.est57/echoproof",
    "version": "0.4.0",
+   "status": "active",
    "first_cargo": "2026-10-14",
    "packages": "cargo",
    "crate": "echoproof",
@@ -950,6 +1029,7 @@
   {
    "name": "io.github.leidarljos/ljos",
    "version": "0.35.0",
+   "status": "active",
    "first_cargo": "2026-10-14",
    "packages": "cargo",
    "crate": "ljos",
@@ -962,6 +1042,7 @@
   {
    "name": "org.renyi-lang/renyi",
    "version": "0.4.0",
+   "status": "active",
    "first_cargo": "2026-10-15",
    "packages": "cargo",
    "crate": "renyi",
@@ -974,6 +1055,7 @@
   {
    "name": "io.github.arifulislamat/database-mcp-libsql",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo+npm+pypi",
    "crate": "database-mcp-rs-libsql",
@@ -986,6 +1068,7 @@
   {
    "name": "io.github.arifulislamat/database-mcp-mariadb",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo+npm+pypi",
    "crate": "database-mcp-rs-mariadb",
@@ -998,6 +1081,7 @@
   {
    "name": "io.github.arifulislamat/database-mcp-mysql",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo+npm+pypi",
    "crate": "database-mcp-rs-mysql",
@@ -1010,6 +1094,7 @@
   {
    "name": "io.github.arifulislamat/database-mcp-postgres",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo+npm+pypi",
    "crate": "database-mcp-rs-postgres",
@@ -1022,6 +1107,7 @@
   {
    "name": "io.github.arifulislamat/database-mcp-sqlite",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo+npm+pypi",
    "crate": "database-mcp-rs-sqlite",
@@ -1034,6 +1120,7 @@
   {
    "name": "io.github.asanabrial/estigia",
    "version": "0.1.1",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo+npm",
    "crate": "estigia",
@@ -1046,6 +1133,7 @@
   {
    "name": "io.github.fatsearch/fats",
    "version": "0.2.4",
+   "status": "active",
    "first_cargo": "2026-10-17",
    "packages": "cargo",
    "crate": "fatsearch",
@@ -1058,6 +1146,7 @@
   {
    "name": "io.github.4DA-Systems/victauri",
    "version": "0.10.1",
+   "status": "active",
    "first_cargo": "2026-10-18",
    "packages": "cargo",
    "crate": "victauri-cli",
@@ -1070,6 +1159,7 @@
   {
    "name": "io.github.Ezra-Black/rekey",
    "version": "0.1.0",
+   "status": "active",
    "first_cargo": "2026-10-18",
    "packages": "cargo",
    "crate": "rekey",
@@ -1082,6 +1172,7 @@
   {
    "name": "io.github.G36maid/moodle-mcp",
    "version": "0.2.1",
+   "status": "active",
    "first_cargo": "2026-10-19",
    "packages": "cargo",
    "crate": "moodle-mcp",
@@ -1094,6 +1185,7 @@
   {
    "name": "io.github.AppachiTech/suvadu",
    "version": "0.5.2",
+   "status": "active",
    "first_cargo": "2026-10-20",
    "packages": "cargo",
    "crate": "suvadu",
@@ -1106,6 +1198,7 @@
   {
    "name": "io.github.emmanuel-defreitas/gpui-agentation",
    "version": "0.6.0",
+   "status": "active",
    "first_cargo": "2026-10-20",
    "packages": "cargo",
    "crate": "gpui-agentation",
@@ -1118,6 +1211,7 @@
   {
    "name": "io.github.marcomq/mq-bridge",
    "version": "1.2.1",
+   "status": "active",
    "first_cargo": "2026-10-20",
    "packages": "cargo+oci",
    "crate": "mq-bridge-app",
@@ -1130,6 +1224,7 @@
   {
    "name": "io.github.PSCatLabs/pscat",
    "version": "0.6.3",
+   "status": "active",
    "first_cargo": "2026-10-23",
    "packages": "cargo",
    "crate": "pscat",
@@ -1142,6 +1237,7 @@
   {
    "name": "io.github.abelreqma/oxiploitability-mcp",
    "version": "0.1.0",
+   "status": "active",
    "first_cargo": "2026-10-23",
    "packages": "cargo",
    "crate": "oxiploitability-mcp",
@@ -1154,6 +1250,7 @@
   {
    "name": "io.github.triplexanalytics/triplex-mcp",
    "version": "0.48.1",
+   "status": "active",
    "first_cargo": "2026-10-23",
    "packages": "cargo",
    "crate": "triplex-mcp",
@@ -1166,6 +1263,7 @@
   {
    "name": "io.github.MikkoParkkola/nab",
    "version": "0.12.6",
+   "status": "active",
    "first_cargo": "2026-10-24",
    "packages": "cargo",
    "crate": "nab",
@@ -1178,6 +1276,7 @@
   {
    "name": "io.github.oxygenframe/oxframe",
    "version": "0.24.3",
+   "status": "active",
    "first_cargo": "2026-10-24",
    "packages": "cargo",
    "crate": "oxframe-cli",
@@ -1190,6 +1289,7 @@
   {
    "name": "io.github.semlith/semlith",
    "version": "0.50.0",
+   "status": "active",
    "first_cargo": "2026-10-24",
    "packages": "cargo",
    "crate": "semlith",
@@ -1202,6 +1302,7 @@
   {
    "name": "io.github.godot-pty/gpty",
    "version": "0.7.0",
+   "status": "active",
    "first_cargo": "2026-10-26",
    "packages": "cargo",
    "crate": "gpty",
@@ -1214,6 +1315,7 @@
   {
    "name": "io.github.devops-infinity/ownsearch",
    "version": "0.5.0",
+   "status": "active",
    "first_cargo": "2026-10-27",
    "packages": "cargo+npm",
    "crate": "ownsearch",
@@ -1226,6 +1328,7 @@
   {
    "name": "io.github.emanuele-em/kanzo",
    "version": "0.1.3",
+   "status": "active",
    "first_cargo": "2026-10-27",
    "packages": "cargo",
    "crate": "kanzo",
@@ -1238,18 +1341,20 @@
   {
    "name": "io.github.ermoluk/mcp-warden",
    "version": "0.5.3",
+   "status": "active",
    "first_cargo": "2026-10-27",
    "packages": "cargo+mcpb+npm",
    "crate": "mcp-warden",
    "repo": "https://github.com/ermoluk/mcp-warden",
    "owner": "ermoluk",
    "owner_type": "User",
-   "stars": 9,
+   "stars": 10,
    "description": "Local credential broker: agents call APIs, SSH and DBs via scoped presets; secrets stay in keychain."
   },
   {
    "name": "io.github.kinkirill/bevy-manual-mcp",
    "version": "0.5.2",
+   "status": "active",
    "first_cargo": "2026-10-29",
    "packages": "cargo",
    "crate": "bevy-manual-mcp",
@@ -1262,6 +1367,7 @@
   {
    "name": "science.transaction.wai/quantum",
    "version": "0.2.2",
+   "status": "active",
    "first_cargo": "2026-10-29",
    "packages": "cargo",
    "crate": "wai-quantum-cli",
@@ -1270,6 +1376,19 @@
    "owner_type": "",
    "stars": "",
    "description": "OpenQASM 3 programs run, checked against their intent and signed on this machine."
+  },
+  {
+   "name": "io.github.dot-ASH/umbriel-mcp",
+   "version": "0.2.1",
+   "status": "active",
+   "first_cargo": "2026-10-30",
+   "packages": "cargo",
+   "crate": "umbriel-mcp",
+   "repo": "https://github.com/dot-ASH/umbriel-mcp",
+   "owner": "dot-ASH",
+   "owner_type": "User",
+   "stars": 0,
+   "description": "Control the Umbriel Wayland compositor: windows, workspaces, input, screenshots, clipboard."
   }
  ]
 }

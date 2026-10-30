@@ -74,10 +74,12 @@ def github_info(repo_url):
 
 
 def collect():
-    total, types, rows = 0, collections.Counter(), []
+    total, active, types, rows = 0, 0, collections.Counter(), []
     for s in latest_servers():
         total += 1
         srv = s["server"]
+        status = s.get("_meta", {}).get(OFFICIAL, {}).get("status", "")
+        active += status == "active"
         t = package_types(srv)
         for x in t:
             types[x] += 1
@@ -87,13 +89,13 @@ def collect():
         crate = next((p.get("identifier") for p in srv.get("packages") or [] if p.get("registryType") == "cargo"), "")
         owner, otype, stars = github_info(repo)
         rows.append({
-            "name": srv["name"], "version": srv.get("version", ""), "first_cargo": first_cargo_date(srv["name"]),
+            "name": srv["name"], "version": srv.get("version", ""), "status": status, "first_cargo": first_cargo_date(srv["name"]),
             "packages": "+".join(t), "crate": crate, "repo": repo,
             "owner": owner, "owner_type": otype, "stars": stars,
             "description": (srv.get("description") or "").strip(),
         })
     rows.sort(key=lambda r: (r["first_cargo"], r["name"]))
-    return {"date": datetime.date.today().isoformat(), "registry_servers": total,
+    return {"date": datetime.date.today().isoformat(), "registry_servers": total, "registry_active": active,
             "package_types": dict(types.most_common()), "cargo_live": CARGO_LIVE, "servers": rows}
 
 
@@ -110,8 +112,13 @@ def cell(text):
     return str(text).replace("|", "/").replace("\n", " ")
 
 
+def pkgs(packages):
+    return " + ".join(f"`{x}`" for x in packages.split("+"))
+
+
 def readme(snap):
-    rows = snap["servers"]
+    deprecated = [r for r in snap["servers"] if r.get("status", "active") != "active"]
+    rows = [r for r in snap["servers"] if r.get("status", "active") == "active"]
     n = len(rows)
     month = snap["date"][:7]
     by_month = collections.Counter(r["first_cargo"][:7] for r in rows)
@@ -130,9 +137,10 @@ def readme(snap):
     out = [f"# The Rust MCP Census", "",
            "Every server in the official [MCP Registry](https://registry.modelcontextprotocol.io) that ships a **cargo** (crates.io) package, counted each month.", "",
            f"## {month_label}: {n} servers", "",
-           f"- **{n}** servers list a cargo package, out of {snap['registry_servers']:,} in the registry.",
+           f"- **{n}** active servers list a cargo package, out of {snap['registry_active']:,} active servers in the registry ({snap['registry_servers']:,} entries, deprecated included)."
+           + (f" {len(deprecated)} more cargo servers are deprecated." if deprecated else ""),
            f"- **{len(owners)}** owners: {people} people and {orgs} organisations on GitHub" + (f", {len(owners) - people - orgs} elsewhere." if len(owners) - people - orgs else "."),
-           f"- Cargo became a registry package type on {snap['cargo_live']}. The first cargo server arrived on {first}; the latest on {last} ({days} days).",
+           f"- Cargo has been accepted in production since registry v1.8.0 ({snap['cargo_live']}). The first cargo server arrived on {first}; the latest on {last} ({days} days).",
            f"- **+{by_month.get(month, 0)}** new in {month_label}.", "",
            "## By month", "", "| Month | New | Total |", "|---|---|---|"]
     total = 0
@@ -141,7 +149,7 @@ def readme(snap):
         out.append(f"| {datetime.date.fromisoformat(m + '-01').strftime('%b %Y')} | {by_month[m]} | {total} |")
     out += ["", "## How they ship", "", "| Packages | Servers |", "|---|---|"]
     for k, v in mix.most_common():
-        out.append(f"| {k.replace('+', ' + ')} | {v} |")
+        out.append(f"| {pkgs(k)} | {v} |")
     out += ["", "Many Rust MCP servers list another way (npm, an MCP bundle or a container) and don't appear here. This census counts servers that list a cargo package.", ""]
     new = [r for r in rows if r["first_cargo"].startswith(month)]
     out += [f"## New in {month_label} ({len(new)})", "", "| First cargo | Server | What it does |", "|---|---|---|"]
@@ -152,18 +160,21 @@ def readme(snap):
     for i, r in enumerate(rows, 1):
         link = f"[`{r['name']}`]({r['repo']})" if r["repo"] else f"`{r['name']}`"
         crate = f"[{r['crate']}](https://crates.io/crates/{r['crate']})" if r["crate"] else ""
-        out.append(f"| {i} | {r['first_cargo']} | {link} | {crate} | {r['packages'].replace('+', ' + ')} | {r['stars']} | {cell(r['description'])} |")
+        out.append(f"| {i} | {r['first_cargo']} | {link} | {crate} | {pkgs(r['packages'])} | {r['stars']} | {cell(r['description'])} |")
+    if deprecated:
+        out += ["", f"## Deprecated ({len(deprecated)})", "", "Marked deprecated in the registry, so not counted above.", ""]
+        out += [f"- `{r['name']}` (first cargo {r['first_cargo']})" for r in deprecated]
     out += ["", "## Method", "",
             f"- **Source:** the registry API (`/v0/servers?version=latest`, then `/v0/servers/{{name}}/versions` for the first version with a cargo package). Owner and stars from the GitHub API. Snapshot taken {snap['date']}.",
-            "- **Counted:** servers whose latest version lists a package with `registryType: cargo`. Servers that list only npm, PyPI, OCI or a bundle are not counted, whatever language they are written in.",
+            "- **Counted:** active servers whose latest version lists a package with `registryType: cargo`. Servers that list only `npm`, `pypi`, `oci` or `mcpb` are not counted, whatever language they are written in. A server that listed cargo in an earlier version but not its latest is not counted.",
+            "- **Dates** are the registry's `publishedAt`, in UTC.",
+            "- **What it does** is each author's own description from the registry, unedited.",
             "- **Stars** are shown, not ranked. Nothing here judges a server.",
             f"- **Data:** [`data/{snap['date']}.json`](data/{snap['date']}.json) and [`data/{snap['date']}.csv`](data/{snap['date']}.csv). Every month gets its own snapshot; none is overwritten.",
-            "- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars).",
+            "- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a month, with the User-Agent `rust-mcp-census`.",
             "- Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).", "",
             "## Background", "",
-            "[An MCP Story about Rust](https://wolfejam.dev/blog/rust-mcp-story): how cargo got into the registry.", "",
-            "---", "",
-            "Know someone running an MCP server who'd like a hand? [The Worth-It Service](https://wolfejam.dev/#worth-it) starts with a free report.", ""]
+            "[An MCP Story about Rust](https://wolfejam.dev/blog/rust-mcp-story): how cargo got into the registry.", ""]
     (ROOT / "README.md").write_text("\n".join(out))
 
 
