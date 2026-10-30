@@ -23,6 +23,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           date=$(date -u +%F)
+          if [ -z "$(git status --porcelain -- README.md data/)" ]; then
+            echo "No change since the last snapshot."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "census/$date"
