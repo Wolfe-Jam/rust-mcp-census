@@ -1,10 +1,10 @@
 {
  "date": "2026-10-30",
- "registry_servers": 53020,
- "registry_active": 52322,
+ "registry_servers": 53046,
+ "registry_active": 52348,
  "package_types": {
   "npm": 14313,
-  "pypi": 4927,
+  "pypi": 4928,
   "mcpb": 1526,
   "oci": 1279,
   "nuget": 165,
@@ -165,7 +165,7 @@
    "repo": "https://github.com/lacs-project/sysknife",
    "owner": "lacs-project",
    "owner_type": "Organization",
-   "stars": 103,
+   "stars": 104,
    "description": "Administers Linux via typed, approval-gated actions with an Ed25519-signed audit trail."
   },
   {
@@ -256,7 +256,7 @@
    "repo": "https://github.com/smbcloudXYZ/smbcloud-cli",
    "owner": "smbcloudXYZ",
    "owner_type": "Organization",
-   "stars": 11,
+   "stars": 12,
    "description": "MCP tools for testing mobile and TV apps on iOS simulators, Android phones, and Apple/Android TV."
   },
   {
@@ -1335,7 +1335,7 @@
    "repo": "https://github.com/emanuele-em/kanzo",
    "owner": "emanuele-em",
    "owner_type": "User",
-   "stars": 189,
+   "stars": 190,
    "description": "Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup."
   },
   {
