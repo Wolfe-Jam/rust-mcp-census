@@ -4,7 +4,7 @@ Every server in the official [MCP Registry](https://registry.modelcontextprotoco
 
 ## 30 October 2026: 104 servers
 
-- **104** active servers list a cargo package, out of 52,322 active servers in the registry (53,020 entries, deprecated included). 2 more cargo servers are deprecated.
+- **104** active servers list a cargo package, out of 52,348 active servers in the registry (53,046 entries, deprecated included). 2 more cargo servers are deprecated.
 - **90** owners: 55 people and 33 organisations on GitHub, 2 elsewhere.
 - Cargo has been accepted in production since registry v1.8.0 (2026-07-13). The first cargo server arrived on 2026-07-13; the latest on 2026-10-30 (109 days).
 - **+10** new in the last 7 days (2026-10-24 to 2026-10-30).
@@ -85,13 +85,13 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 8 | 2026-07-19 | [`io.github.brechanbech/sec-mcp`](https://github.com/brechanbech/sec-mcp) | [sec-mcp](https://crates.io/crates/sec-mcp) | `cargo` | 0 | Rust MCP server for SEC EDGAR data — company filings, financial concepts, and company info |
 | 9 | 2026-07-19 | [`io.github.brechanbech/xojo-mcp`](https://github.com/brechanbech/xojo-mcp) | [xojo-mcp](https://crates.io/crates/xojo-mcp) | `cargo` | 0 | MCP server for controlling the Xojo IDE on macOS |
 | 10 | 2026-07-20 | [`io.github.patchloom/patchloom`](https://github.com/patchloom/patchloom) | [patchloom](https://crates.io/crates/patchloom) | `cargo` + `npm` | 20 | Agent-safe structured edits: JSON/YAML/TOML/md/AST, dry-run, batch/tx. Not a filesystem MCP. |
-| 11 | 2026-07-28 | [`io.github.lacs-project/sysknife`](https://github.com/lacs-project/sysknife) | [sysknife-cli](https://crates.io/crates/sysknife-cli) | `cargo` | 103 | Administers Linux via typed, approval-gated actions with an Ed25519-signed audit trail. |
+| 11 | 2026-07-28 | [`io.github.lacs-project/sysknife`](https://github.com/lacs-project/sysknife) | [sysknife-cli](https://crates.io/crates/sysknife-cli) | `cargo` | 104 | Administers Linux via typed, approval-gated actions with an Ed25519-signed audit trail. |
 | 12 | 2026-07-28 | [`io.github.protostatis/unbrowser`](https://github.com/protostatis/unbrowser) | [unbrowser](https://crates.io/crates/unbrowser) | `cargo` + `pypi` | 17 | Chrome-free MCP web access for agents with low-token page maps and browser escalation hints. |
 | 13 | 2026-07-29 | [`io.github.Wolfe-Jam/mcp-better`](https://github.com/Wolfe-Jam/mcp-better) | [mcp-better](https://crates.io/crates/mcp-better) | `cargo` + `npm` | 2 | AAIF-verified modern MCP setup optimised to the 2026-07-28 model (BETTER textbook). |
 | 14 | 2026-07-29 | [`io.github.klNuno/fast-mcp-ssh`](https://github.com/klNuno/fast-mcp-ssh) | [fast-mcp-ssh](https://crates.io/crates/fast-mcp-ssh) | `cargo` | 5 | SSH, SFTP, PTY shells, host-to-host copies and remote screenshots for AI agents. One Rust binary. |
 | 15 | 2026-07-31 | [`io.github.Mapika/portview`](https://github.com/Mapika/portview) | [portview](https://crates.io/crates/portview) | `cargo` | 61 | See what's on your ports, the processes behind them, and diagnose conflicts and leaks. |
 | 16 | 2026-08-01 | [`io.github.morluto/leantoken`](https://github.com/morluto/leantoken) | [leantoken](https://crates.io/crates/leantoken) | `cargo` | 134 | Token-bounded repository context for coding agents over MCP. |
-| 17 | 2026-08-02 | [`io.github.smbcloudXYZ/xcrs`](https://github.com/smbcloudXYZ/smbcloud-cli) | [xcrs](https://crates.io/crates/xcrs) | `cargo` | 11 | MCP tools for testing mobile and TV apps on iOS simulators, Android phones, and Apple/Android TV. |
+| 17 | 2026-08-02 | [`io.github.smbcloudXYZ/xcrs`](https://github.com/smbcloudXYZ/smbcloud-cli) | [xcrs](https://crates.io/crates/xcrs) | `cargo` | 12 | MCP tools for testing mobile and TV apps on iOS simulators, Android phones, and Apple/Android TV. |
 | 18 | 2026-08-05 | [`io.github.koshak01/tidex6-mcp-local`](https://github.com/koshak01/tidex6) | [tidex6-mcp-local](https://crates.io/crates/tidex6-mcp-local) | `cargo` | 1 | Private USDC/USDT payments on Solana: hidden amounts, unlinkable, optional auditor. |
 | 19 | 2026-08-05 | [`io.github.mahabubul470/gpp`](https://github.com/mahabubul470/gpp) | [gpp-cli](https://crates.io/crates/gpp-cli) | `cargo` | 2 | Project knowledge graph with history-checked belief staleness, changeset proposals, cost reporting |
 | 20 | 2026-08-06 | [`io.github.aurumflux20/effectfence`](https://github.com/aurumflux20/effectfence) | [effectfence](https://crates.io/crates/effectfence) | `cargo` + `npm` | 0 | Stops agents double-firing side effects: 1,000 racing duplicates, exactly one execution. |
@@ -174,7 +174,7 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 97 | 2026-10-24 | [`io.github.semlith/semlith`](https://github.com/semlith/semlith) | [semlith](https://crates.io/crates/semlith) | `cargo` | 7 | Local search over your code and documents for AI agents. |
 | 98 | 2026-10-26 | [`io.github.godot-pty/gpty`](https://github.com/godot-pty/gpty) | [gpty](https://crates.io/crates/gpty) | `cargo` | 78 | Spawn panes, inject input and read output in a tiling terminal workspace |
 | 99 | 2026-10-27 | [`io.github.devops-infinity/ownsearch`](https://github.com/devops-infinity/ownsearch) | [ownsearch](https://crates.io/crates/ownsearch) | `cargo` + `npm` | 0 | Quality-ranked SearXNG search over MCP with local fleet state, scoring, and merged results. |
-| 100 | 2026-10-27 | [`io.github.emanuele-em/kanzo`](https://github.com/emanuele-em/kanzo) | [kanzo](https://crates.io/crates/kanzo) | `cargo` | 189 | Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup. |
+| 100 | 2026-10-27 | [`io.github.emanuele-em/kanzo`](https://github.com/emanuele-em/kanzo) | [kanzo](https://crates.io/crates/kanzo) | `cargo` | 190 | Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup. |
 | 101 | 2026-10-27 | [`io.github.ermoluk/mcp-warden`](https://github.com/ermoluk/mcp-warden) | [mcp-warden](https://crates.io/crates/mcp-warden) | `cargo` + `mcpb` + `npm` | 10 | Local credential broker: agents call APIs, SSH and DBs via scoped presets; secrets stay in keychain. |
 | 102 | 2026-10-29 | [`io.github.kinkirill/bevy-manual-mcp`](https://github.com/kinkirill/bevy_manual_mcp) | [bevy-manual-mcp](https://crates.io/crates/bevy-manual-mcp) | `cargo` | 16 | Version-accurate Bevy API docs, Book, migration guides and examples for AI agents. |
 | 103 | 2026-10-29 | `science.transaction.wai/quantum` | [wai-quantum-cli](https://crates.io/crates/wai-quantum-cli) | `cargo` |  | OpenQASM 3 programs run, checked against their intent and signed on this machine. |
