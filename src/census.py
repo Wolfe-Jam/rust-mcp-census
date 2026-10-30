@@ -112,6 +112,11 @@ def cell(text):
     return str(text).replace("|", "/").replace("\n", " ")
 
 
+def monday(date):
+    d = datetime.date.fromisoformat(date)
+    return (d - datetime.timedelta(days=d.weekday())).isoformat()
+
+
 def pkgs(packages):
     return " + ".join(f"`{x}`" for x in packages.split("+"))
 
@@ -120,8 +125,10 @@ def readme(snap):
     deprecated = [r for r in snap["servers"] if r.get("status", "active") != "active"]
     rows = [r for r in snap["servers"] if r.get("status", "active") == "active"]
     n = len(rows)
-    month = snap["date"][:7]
+    today = datetime.date.fromisoformat(snap["date"])
+    week_ago = (today - datetime.timedelta(days=6)).isoformat()
     by_month = collections.Counter(r["first_cargo"][:7] for r in rows)
+    by_week = collections.Counter(monday(r["first_cargo"]) for r in rows)
     owner_type = {}
     for r in rows:
         owner_type.setdefault(r["owner"] or r["name"].split("/")[0], r["owner_type"])
@@ -132,17 +139,22 @@ def readme(snap):
     last = max(r["first_cargo"] for r in rows)
     days = (datetime.date.fromisoformat(last) - datetime.date.fromisoformat(snap["cargo_live"])).days
     mix = collections.Counter(r["packages"] for r in rows)
-    month_label = datetime.date.fromisoformat(snap["date"]).strftime("%B %Y")
+    day_label = f"{today.day} {today:%B %Y}"
 
     out = [f"# The Rust MCP Census", "",
-           "Every server in the official [MCP Registry](https://registry.modelcontextprotocol.io) that ships a **cargo** (crates.io) package, counted each month.", "",
-           f"## {month_label}: {n} servers", "",
+           "Every server in the official [MCP Registry](https://registry.modelcontextprotocol.io) that ships a **cargo** (crates.io) package, counted each week.", "",
+           f"## {day_label}: {n} servers", "",
            f"- **{n}** active servers list a cargo package, out of {snap['registry_active']:,} active servers in the registry ({snap['registry_servers']:,} entries, deprecated included)."
            + (f" {len(deprecated)} more cargo servers are deprecated." if deprecated else ""),
            f"- **{len(owners)}** owners: {people} people and {orgs} organisations on GitHub" + (f", {len(owners) - people - orgs} elsewhere." if len(owners) - people - orgs else "."),
            f"- Cargo has been accepted in production since registry v1.8.0 ({snap['cargo_live']}). The first cargo server arrived on {first}; the latest on {last} ({days} days).",
-           f"- **+{by_month.get(month, 0)}** new in {month_label}.", "",
-           "## By month", "", "| Month | New | Total |", "|---|---|---|"]
+           f"- **+{sum(r['first_cargo'] >= week_ago for r in rows)}** new in the last 7 days ({week_ago} to {snap['date']}).", "",
+           "## By week", "", "Weeks start on Monday.", "", "| Week of | New | Total |", "|---|---|---|"]
+    total = 0
+    for w in sorted(by_week):
+        total += by_week[w]
+        out.append(f"| {w}{' (so far)' if w == monday(snap['date']) else ''} | {by_week[w]} | {total} |")
+    out += ["", "## By month", "", "| Month | New | Total |", "|---|---|---|"]
     total = 0
     for m in sorted(by_month):
         total += by_month[m]
@@ -151,8 +163,8 @@ def readme(snap):
     for k, v in mix.most_common():
         out.append(f"| {pkgs(k)} | {v} |")
     out += ["", "Many Rust MCP servers list another way (npm, an MCP bundle or a container) and don't appear here. This census counts servers that list a cargo package.", ""]
-    new = [r for r in rows if r["first_cargo"].startswith(month)]
-    out += [f"## New in {month_label} ({len(new)})", "", "| First cargo | Server | What it does |", "|---|---|---|"]
+    new = [r for r in rows if r["first_cargo"] >= week_ago]
+    out += [f"## New in the last 7 days ({len(new)})", "", "| First cargo | Server | What it does |", "|---|---|---|"]
     for r in reversed(new):
         link = f"[`{r['name']}`]({r['repo']})" if r["repo"] else f"`{r['name']}`"
         out.append(f"| {r['first_cargo']} | {link} | {cell(r['description'])} |")
@@ -170,8 +182,8 @@ def readme(snap):
             "- **Dates** are the registry's `publishedAt`, in UTC.",
             "- **What it does** is each author's own description from the registry, unedited.",
             "- **Stars** are shown, not ranked. Nothing here judges a server.",
-            f"- **Data:** [`data/{snap['date']}.json`](data/{snap['date']}.json) and [`data/{snap['date']}.csv`](data/{snap['date']}.csv). Every month gets its own snapshot; none is overwritten.",
-            "- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a month, with the User-Agent `rust-mcp-census`.",
+            f"- **Data:** [`data/{snap['date']}.json`](data/{snap['date']}.json) and [`data/{snap['date']}.csv`](data/{snap['date']}.csv). Every run gets its own snapshot; none is overwritten.",
+            "- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week, with the User-Agent `rust-mcp-census`.",
             "- Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).", "",
             "## Background", "",
             "[An MCP Story about Rust](https://wolfejam.dev/blog/rust-mcp-story): how cargo got into the registry.", ""]

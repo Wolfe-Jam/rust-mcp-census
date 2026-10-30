@@ -1,13 +1,36 @@
 # The Rust MCP Census
 
-Every server in the official [MCP Registry](https://registry.modelcontextprotocol.io) that ships a **cargo** (crates.io) package, counted each month.
+Every server in the official [MCP Registry](https://registry.modelcontextprotocol.io) that ships a **cargo** (crates.io) package, counted each week.
 
-## October 2026: 104 servers
+## 30 October 2026: 104 servers
 
 - **104** active servers list a cargo package, out of 52,322 active servers in the registry (53,020 entries, deprecated included). 2 more cargo servers are deprecated.
 - **90** owners: 55 people and 33 organisations on GitHub, 2 elsewhere.
 - Cargo has been accepted in production since registry v1.8.0 (2026-07-13). The first cargo server arrived on 2026-07-13; the latest on 2026-10-30 (109 days).
-- **+42** new in October 2026.
+- **+10** new in the last 7 days (2026-10-24 to 2026-10-30).
+
+## By week
+
+Weeks start on Monday.
+
+| Week of | New | Total |
+|---|---|---|
+| 2026-07-13 | 9 | 9 |
+| 2026-07-20 | 1 | 10 |
+| 2026-07-27 | 7 | 17 |
+| 2026-08-03 | 7 | 24 |
+| 2026-08-10 | 2 | 26 |
+| 2026-08-17 | 4 | 30 |
+| 2026-08-24 | 5 | 35 |
+| 2026-08-31 | 6 | 41 |
+| 2026-09-07 | 7 | 48 |
+| 2026-09-14 | 6 | 54 |
+| 2026-09-21 | 7 | 61 |
+| 2026-09-28 | 7 | 68 |
+| 2026-10-05 | 5 | 73 |
+| 2026-10-12 | 14 | 87 |
+| 2026-10-19 | 10 | 97 |
+| 2026-10-26 (so far) | 7 | 104 |
 
 ## By month
 
@@ -33,7 +56,7 @@ Every server in the official [MCP Registry](https://registry.modelcontextprotoco
 
 Many Rust MCP servers list another way (npm, an MCP bundle or a container) and don't appear here. This census counts servers that list a cargo package.
 
-## New in October 2026 (42)
+## New in the last 7 days (10)
 
 | First cargo | Server | What it does |
 |---|---|---|
@@ -47,38 +70,6 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 2026-10-24 | [`io.github.semlith/semlith`](https://github.com/semlith/semlith) | Local search over your code and documents for AI agents. |
 | 2026-10-24 | [`io.github.oxygenframe/oxframe`](https://github.com/oxygenframe/oxframe-cli) | Make videos from code: check scenes frame by frame, inspect nodes, render a frame, search the docs. |
 | 2026-10-24 | [`io.github.MikkoParkkola/nab`](https://github.com/MikkoParkkola/nab) | Token-optimized HTTP client for LLMs: fetches any URL as clean markdown. CLI and MCP server. |
-| 2026-10-23 | [`io.github.triplexanalytics/triplex-mcp`](https://github.com/triplexanalytics/triplex) | Infer and validate schema contracts on local CSV, TSV and JSON Lines files. No network access. |
-| 2026-10-23 | [`io.github.abelreqma/oxiploitability-mcp`](https://github.com/abelreqma/oxiploitability-mcp) | Sourced, evidence-aware CVE research for CVEs, products, SBOMs and images via NVD, EPSS, KEV, OSV. |
-| 2026-10-23 | [`io.github.PSCatLabs/pscat`](https://github.com/PSCatLabs/pscat) | Render and debug PostScript to PNG, SVG or PDF, write handwritten notes, and make generative art |
-| 2026-10-20 | [`io.github.marcomq/mq-bridge`](https://github.com/marcomq/mq-bridge) | Move data between 15+ databases, queues and files at high throughput, without it entering context |
-| 2026-10-20 | [`io.github.emmanuel-defreitas/gpui-agentation`](https://github.com/emmanuel-defreitas/gpui-agentation) | Read and manage development annotations from a local GPUI app. |
-| 2026-10-20 | [`io.github.AppachiTech/suvadu`](https://github.com/AppachiTech/suvadu) | Local shell history and AI agent sessions over MCP: search commands, failures, risk and git changes |
-| 2026-10-19 | [`io.github.G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | Moodle LMS for LLM agents — courses, assignments, files, submissions in one static binary. |
-| 2026-10-18 | [`io.github.Ezra-Black/rekey`](https://github.com/Ezra-Black/rekey) | Rotate API keys across AWS, GitLab, Cloudflare, OpenAI & more. Secrets never reach the model. |
-| 2026-10-18 | [`io.github.4DA-Systems/victauri`](https://github.com/4DA-Systems/victauri) | In-process MCP server for Tauri apps: DOM, IPC with bodies, Rust state, SQLite. Debug builds only. |
-| 2026-10-17 | [`io.github.fatsearch/fats`](https://github.com/fatsearch/fatsearch) | Web pages, PDFs and documents as small, clean, cached Markdown for AI agents |
-| 2026-10-17 | [`io.github.asanabrial/estigia`](https://github.com/asanabrial/estigia) | Guardrails for AI coding agents: verified claims, reviews bound to exact commits, gated merges. |
-| 2026-10-17 | [`io.github.arifulislamat/database-mcp-sqlite`](https://github.com/arifulislamat/database-mcp) | MCP server for SQLite databases. Read-only by default, row caps, statement timeouts. |
-| 2026-10-17 | [`io.github.arifulislamat/database-mcp-postgres`](https://github.com/arifulislamat/database-mcp) | MCP server for PostgreSQL. Read-only by default, row caps, timeouts, secrets never logged. |
-| 2026-10-17 | [`io.github.arifulislamat/database-mcp-mysql`](https://github.com/arifulislamat/database-mcp) | MCP server for MySQL. Read-only by default, row caps, statement timeouts, secrets never logged. |
-| 2026-10-17 | [`io.github.arifulislamat/database-mcp-mariadb`](https://github.com/arifulislamat/database-mcp) | MCP server for MariaDB. Read-only by default, row caps, timeouts, secrets never logged. |
-| 2026-10-17 | [`io.github.arifulislamat/database-mcp-libsql`](https://github.com/arifulislamat/database-mcp) | MCP server for libSQL/Turso, local or remote. Read-only by default, row caps, timeouts. |
-| 2026-10-15 | [`org.renyi-lang/renyi`](https://github.com/renyi-lang/renyi) | Check, format, run and test Renyi programs; the project map with effects, diffs and chunks. |
-| 2026-10-14 | [`io.github.leidarljos/ljos`](https://github.com/leidarljos/ljos) | Local memory, a work tracker and a shell-command guard shared by coding agents on one machine. |
-| 2026-10-14 | [`io.github.est57/echoproof`](https://github.com/est57/echoproof) | Replay real HTTP traffic against base and changed builds; flag behavior changes the intent omits. |
-| 2026-10-13 | [`io.github.Blackcat-Informatics/purrassist`](https://github.com/Blackcat-Informatics/purrassist) | Recovers intent from imperfect AI output: JSON, tool calls, names, paths and Markdown edits. |
-| 2026-10-12 | [`io.github.scrapertweeter3-prog/flatrate-math`](https://github.com/scrapertweeter3-prog/mcp-flatratemath) | Benchmark math for flat-rate software subscriptions against a fully loaded senior hire. |
-| 2026-10-11 | [`io.github.smbcloudXYZ/ascapi`](https://github.com/smbcloudXYZ/smbcloud-ascapi) | Forget Fastlane, this is the app stores coolest API. |
-| 2026-10-11 | [`io.github.nrupala/codetopo`](https://github.com/nrupala/codetopo) | Domain-blind code graphs for AI agents: symbols, calls, blast radius, proof-checked snapshots. |
-| 2026-10-11 | [`io.github.moreno-omar/mcp-obsidian`](https://github.com/moreno-omar/mcp_obsidian) | Search an Obsidian vault by tag, term and wikilink graph. Read-only, deterministic, no embeddings. |
-| 2026-10-10 | [`io.github.yrangana/fm-mcp`](https://github.com/yrangana/fm-mcp) | Delegate summarising, extraction, classification and OCR to the macOS 27 on-device model. |
-| 2026-10-06 | [`io.github.Tavrin/saccade`](https://github.com/Tavrin/saccade) | Perceptual visual regression, image evidence inspection and bounded decision proposals. |
-| 2026-10-04 | [`io.github.craftbag/craftbag-mcp`](https://github.com/craftbag/craftbag) | MCP server to list, load, explain, and validate Agent Skills. |
-| 2026-10-04 | [`io.github.aleksUIX/pixellint`](https://github.com/aleksUIX/pixellint) | Validate pixels, postbacks, conversion API payloads, and tracking URLs with spec-backed findings. |
-| 2026-10-03 | [`io.github.openreadout/openreadout`](https://github.com/openreadout/openreadout) | Read raw lab-instrument files offline: metadata, previews, integrity checks, open-format export. |
-| 2026-10-02 | [`io.github.joowani/tree-sitter-mcp-server`](https://github.com/joowani/tree-sitter-mcp-server) | Parse code into Tree-sitter ASTs to see node kinds, field names, and positions |
-| 2026-10-02 | [`io.github.MykytaStel/repopilot`](https://github.com/MykytaStel/repopilot) | Local, deterministic review of Git changes: weakened tests and CI gates, risky flows, blast radius. |
-| 2026-10-01 | [`io.github.damejeras/agentgrasp`](https://github.com/damejeras/agentgrasp) | Yes/no questions about local files, and relevant-file search, with TypeSafe Jev |
 
 ## All 104
 
@@ -203,8 +194,8 @@ Marked deprecated in the registry, so not counted above.
 - **Dates** are the registry's `publishedAt`, in UTC.
 - **What it does** is each author's own description from the registry, unedited.
 - **Stars** are shown, not ranked. Nothing here judges a server.
-- **Data:** [`data/2026-10-30.json`](data/2026-10-30.json) and [`data/2026-10-30.csv`](data/2026-10-30.csv). Every month gets its own snapshot; none is overwritten.
-- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a month, with the User-Agent `rust-mcp-census`.
+- **Data:** [`data/2026-10-30.json`](data/2026-10-30.json) and [`data/2026-10-30.csv`](data/2026-10-30.csv). Every run gets its own snapshot; none is overwritten.
+- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week, with the User-Agent `rust-mcp-census`.
 - Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).
 
 ## Background
