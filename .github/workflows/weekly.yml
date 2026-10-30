@@ -1,0 +1,33 @@
+name: Weekly census
+
+on:
+  schedule:
+    - cron: "0 23 * * 0"  # Sundays, 23:00 UTC: the week (Monday to Sunday) is all but complete
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 src/census.py | tee summary.txt
+      - name: Open a PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          date=$(date -u +%F)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "census/$date"
+          git add README.md data/
+          git commit -m "Census: $date"
+          git push -f origin "census/$date"
+          gh pr create --base main --head "census/$date" --title "Census: $date" \
+            --body "$(cat summary.txt). Merge to publish this week's count."
