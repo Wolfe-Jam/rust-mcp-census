@@ -126,7 +126,10 @@ def readme(snap):
     rows = [r for r in snap["servers"] if r.get("status", "active") == "active"]
     n = len(rows)
     today = datetime.date.fromisoformat(snap["date"])
-    week_ago = (today - datetime.timedelta(days=6)).isoformat()
+    # The last complete week (Monday to Sunday), the same weeks as the "By week" table.
+    week_start = datetime.date.fromisoformat(monday(snap["date"])) - datetime.timedelta(days=7)
+    week_end = week_start + datetime.timedelta(days=6)
+    in_week = lambda r: week_start.isoformat() <= r["first_cargo"] <= week_end.isoformat()
     by_month = collections.Counter(r["first_cargo"][:7] for r in rows)
     by_week = collections.Counter(monday(r["first_cargo"]) for r in rows)
     owner_type = {}
@@ -148,7 +151,7 @@ def readme(snap):
            + (f" {len(deprecated)} more cargo servers are deprecated." if deprecated else ""),
            f"- **{len(owners)}** owners: {people} people and {orgs} organisations on GitHub" + (f", {len(owners) - people - orgs} elsewhere." if len(owners) - people - orgs else "."),
            f"- Cargo has been accepted in production since registry v1.8.0 ({snap['cargo_live']}). The first cargo server arrived on {first}; the latest on {last} ({days} days).",
-           f"- **+{sum(r['first_cargo'] >= week_ago for r in rows)}** new in the last 7 days ({week_ago} to {snap['date']}).", "",
+           f"- **+{sum(in_week(r) for r in rows)}** new last week ({week_start} to {week_end}).", "",
            "## By week", "", "Weeks start on Monday.", "", "| Week of | New | Total |", "|---|---|---|"]
     total = 0
     for w in sorted(by_week):
@@ -163,8 +166,8 @@ def readme(snap):
     for k, v in mix.most_common():
         out.append(f"| {pkgs(k)} | {v} |")
     out += ["", "Many Rust MCP servers list another way (npm, an MCP bundle or a container) and don't appear here. This census counts servers that list a cargo package.", ""]
-    new = [r for r in rows if r["first_cargo"] >= week_ago]
-    out += [f"## New in the last 7 days ({len(new)})", "", "| First cargo | Server | What it does |", "|---|---|---|"]
+    new = [r for r in rows if in_week(r)]
+    out += [f"## New last week ({len(new)})", "", "| First cargo | Server | What it does |", "|---|---|---|"]
     for r in reversed(new):
         link = f"[`{r['name']}`]({r['repo']})" if r["repo"] else f"`{r['name']}`"
         out.append(f"| {r['first_cargo']} | {link} | {cell(r['description'])} |")
