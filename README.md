@@ -7,7 +7,7 @@ Every server in the official [MCP Registry](https://registry.modelcontextprotoco
 - **113** active servers list a cargo package, out of 53,831 active servers in the registry (54,680 entries, deprecated included). 2 more cargo servers are deprecated.
 - **94** owners: 59 people and 33 organisations on GitHub, 2 elsewhere.
 - Cargo has been accepted in production since registry v1.8.0 (2026-07-13). The first cargo server arrived on 2026-07-13; the latest on 2026-11-01 (111 days).
-- **+15** new in the last 7 days (2026-10-27 to 2026-11-02).
+- **+16** new last week (2026-10-26 to 2026-11-01).
 
 ## By week
 
@@ -57,7 +57,7 @@ Weeks start on Monday.
 
 Many Rust MCP servers list another way (npm, an MCP bundle or a container) and don't appear here. This census counts servers that list a cargo package.
 
-## New in the last 7 days (15)
+## New last week (16)
 
 | First cargo | Server | What it does |
 |---|---|---|
@@ -76,6 +76,7 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 2026-10-27 | [`io.github.ermoluk/mcp-warden`](https://github.com/ermoluk/mcp-warden) | Local credential broker: agents call APIs, SSH and DBs via scoped presets; secrets stay in keychain. |
 | 2026-10-27 | [`io.github.emanuele-em/kanzo`](https://github.com/emanuele-em/kanzo) | Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup. |
 | 2026-10-27 | [`io.github.devops-infinity/ownsearch`](https://github.com/devops-infinity/ownsearch) | Quality-ranked SearXNG search over MCP with local fleet state, scoring, and merged results. |
+| 2026-10-26 | [`io.github.godot-pty/gpty`](https://github.com/godot-pty/gpty) | Spawn panes, inject input and read output in a tiling terminal workspace |
 
 ## All 113
 
@@ -210,7 +211,7 @@ Marked deprecated in the registry, so not counted above.
 - **What it does** is each author's own description from the registry, unedited.
 - **Stars** are shown, not ranked. Nothing here judges a server.
 - **Data:** [`data/2026-11-02.json`](data/2026-11-02.json) and [`data/2026-11-02.csv`](data/2026-11-02.csv). One snapshot per day; earlier days are never overwritten.
-- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week (Sundays, 23:00 UTC, by [a GitHub Action](.github/workflows/weekly.yml)), with the User-Agent `rust-mcp-census`.
+- **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week (Mondays, 06:00 UTC, by [a GitHub Action](.github/workflows/weekly.yml)), with the User-Agent `rust-mcp-census`.
 - Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).
 
 ## Background

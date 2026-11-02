@@ -2,7 +2,7 @@ name: Weekly census
 
 on:
   schedule:
-    - cron: "0 23 * * 0"  # Sundays, 23:00 UTC: the week (Monday to Sunday) is all but complete
+    - cron: "0 6 * * 1"  # Mondays, 06:00 UTC: last week (Monday to Sunday) is complete; the PR is ready for a Monday merge
   workflow_dispatch:
 
 permissions:
