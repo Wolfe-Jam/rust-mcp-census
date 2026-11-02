@@ -2,12 +2,12 @@
 
 Every server in the official [MCP Registry](https://registry.modelcontextprotocol.io) that ships a **cargo** (crates.io) package, counted each week.
 
-## 30 October 2026: 104 servers
+## 2 November 2026: 113 servers
 
-- **104** active servers list a cargo package, out of 52,348 active servers in the registry (53,046 entries, deprecated included). 2 more cargo servers are deprecated.
-- **90** owners: 55 people and 33 organisations on GitHub, 2 elsewhere.
-- Cargo has been accepted in production since registry v1.8.0 (2026-07-13). The first cargo server arrived on 2026-07-13; the latest on 2026-10-30 (109 days).
-- **+10** new in the last 7 days (2026-10-24 to 2026-10-30).
+- **113** active servers list a cargo package, out of 53,831 active servers in the registry (54,680 entries, deprecated included). 2 more cargo servers are deprecated.
+- **94** owners: 59 people and 33 organisations on GitHub, 2 elsewhere.
+- Cargo has been accepted in production since registry v1.8.0 (2026-07-13). The first cargo server arrived on 2026-07-13; the latest on 2026-11-01 (111 days).
+- **+15** new in the last 7 days (2026-10-27 to 2026-11-02).
 
 ## By week
 
@@ -30,7 +30,7 @@ Weeks start on Monday.
 | 2026-10-05 | 5 | 73 |
 | 2026-10-12 | 14 | 87 |
 | 2026-10-19 | 10 | 97 |
-| 2026-10-26 (so far) | 7 | 104 |
+| 2026-10-26 | 16 | 113 |
 
 ## By month
 
@@ -39,43 +39,49 @@ Weeks start on Monday.
 | Jul 2026 | 15 | 15 |
 | Aug 2026 | 20 | 35 |
 | Sep 2026 | 27 | 62 |
-| Oct 2026 | 42 | 104 |
+| Oct 2026 | 44 | 106 |
+| Nov 2026 | 7 | 113 |
 
 ## How they ship
 
 | Packages | Servers |
 |---|---|
-| `cargo` | 73 |
+| `cargo` | 81 |
 | `cargo` + `npm` | 12 |
 | `cargo` + `oci` | 5 |
+| `cargo` + `mcpb` | 5 |
 | `cargo` + `npm` + `pypi` | 5 |
-| `cargo` + `mcpb` | 4 |
 | `cargo` + `npm` + `oci` | 2 |
 | `cargo` + `mcpb` + `npm` | 2 |
 | `cargo` + `pypi` | 1 |
 
 Many Rust MCP servers list another way (npm, an MCP bundle or a container) and don't appear here. This census counts servers that list a cargo package.
 
-## New in the last 7 days (10)
+## New in the last 7 days (15)
 
 | First cargo | Server | What it does |
 |---|---|---|
+| 2026-11-01 | [`io.github.yarenty/emperor-vikunja`](https://github.com/yarenty/emperor-vikunja) | Vikunja tasks for MCP clients: list, read, create and update tasks, comment, list projects. |
+| 2026-11-01 | [`io.github.yarenty/emperor-pdf`](https://github.com/yarenty/emperor-pdf) | Read, search and render the PDFs in one folder; merge, extract and create them from Markdown. |
+| 2026-11-01 | [`io.github.yarenty/emperor-mail`](https://github.com/yarenty/emperor-mail) | Email over IMAP and SMTP: search, read messages and attachments, draft, and send when allowed |
+| 2026-11-01 | [`io.github.yarenty/emperor-folder`](https://github.com/yarenty/emperor-folder) | List, read, search and (opt-in) write, edit and move files inside one folder, never outside it. |
+| 2026-11-01 | [`io.github.bug-ops/mcpls`](https://github.com/bug-ops/mcpls) | Universal MCP to LSP bridge exposing language server code intelligence as MCP tools |
+| 2026-11-01 | [`io.github.Wolfe-Jam/rust-mcp-preflight`](https://github.com/Wolfe-Jam/rust-mcp-preflight) | Check an MCP Registry listing before you publish: README mcp-name line, server.json, name. |
+| 2026-11-01 | [`io.github.DeSchaker/forthling`](https://github.com/DeSchaker/forthling) | Run Forth-2012 in a sandbox: definitions stay between calls, each result shows the stacks. |
+| 2026-10-31 | [`io.github.agzyazilim/rust-mcp`](https://github.com/agzyazilim/rust-mcp) | Rust development tools for offline context, compiler diagnostics, focused tests and Cargo execution. |
+| 2026-10-30 | [`io.github.melihbirim/pipetable`](https://github.com/melihbirim/pipetable) | Local data runtime for AI agents: query CSV, Excel, Parquet and JSON files with DuckDB SQL. |
 | 2026-10-30 | [`io.github.dot-ASH/umbriel-mcp`](https://github.com/dot-ASH/umbriel-mcp) | Control the Umbriel Wayland compositor: windows, workspaces, input, screenshots, clipboard. |
 | 2026-10-29 | `science.transaction.wai/quantum` | OpenQASM 3 programs run, checked against their intent and signed on this machine. |
 | 2026-10-29 | [`io.github.kinkirill/bevy-manual-mcp`](https://github.com/kinkirill/bevy_manual_mcp) | Version-accurate Bevy API docs, Book, migration guides and examples for AI agents. |
 | 2026-10-27 | [`io.github.ermoluk/mcp-warden`](https://github.com/ermoluk/mcp-warden) | Local credential broker: agents call APIs, SSH and DBs via scoped presets; secrets stay in keychain. |
 | 2026-10-27 | [`io.github.emanuele-em/kanzo`](https://github.com/emanuele-em/kanzo) | Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup. |
 | 2026-10-27 | [`io.github.devops-infinity/ownsearch`](https://github.com/devops-infinity/ownsearch) | Quality-ranked SearXNG search over MCP with local fleet state, scoring, and merged results. |
-| 2026-10-26 | [`io.github.godot-pty/gpty`](https://github.com/godot-pty/gpty) | Spawn panes, inject input and read output in a tiling terminal workspace |
-| 2026-10-24 | [`io.github.semlith/semlith`](https://github.com/semlith/semlith) | Local search over your code and documents for AI agents. |
-| 2026-10-24 | [`io.github.oxygenframe/oxframe`](https://github.com/oxygenframe/oxframe-cli) | Make videos from code: check scenes frame by frame, inspect nodes, render a frame, search the docs. |
-| 2026-10-24 | [`io.github.MikkoParkkola/nab`](https://github.com/MikkoParkkola/nab) | Token-optimized HTTP client for LLMs: fetches any URL as clean markdown. CLI and MCP server. |
 
-## All 104
+## All 113
 
 | # | First cargo | Server | Crate | Packages | ★ | What it does |
 |---|---|---|---|---|---|---|
-| 1 | 2026-07-13 | [`io.github.VoidNullable/lific`](https://github.com/VoidNullable/lific) | [lific](https://crates.io/crates/lific) | `cargo` | 83 | Local-first, lightweight issue tracker. Single binary, SQLite-backed, MCP-native. |
+| 1 | 2026-07-13 | [`io.github.VoidNullable/lific`](https://github.com/VoidNullable/lific) | [lific](https://crates.io/crates/lific) | `cargo` | 84 | Local-first, lightweight issue tracker. Single binary, SQLite-backed, MCP-native. |
 | 2 | 2026-07-14 | [`io.github.ltspace/dowse`](https://github.com/ltspace/dowse) | [dowse](https://crates.io/crates/dowse) | `cargo` | 39 | Fast local full-text search for Windows files (tantivy + jieba), exposed to AI agents over MCP. |
 | 3 | 2026-07-14 | [`io.github.ojhermann-org/ferric-fred-mcp`](https://github.com/ojhermann-org/ferric-fred) | [ferric-fred-mcp](https://crates.io/crates/ferric-fred-mcp) | `cargo` | 0 | MCP server for FRED (Federal Reserve Economic Data): full read API plus GeoFRED, 34 tools. |
 | 4 | 2026-07-17 | [`io.github.Liohtml/matomo-mcp`](https://github.com/Liohtml/matomo-mcp) | [matomo-mcp](https://crates.io/crates/matomo-mcp) | `cargo` + `oci` | 0 | Curated read-only Matomo Analytics tools: traffic, pages, referrers, e-commerce, real-time & more. |
@@ -85,12 +91,12 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 8 | 2026-07-19 | [`io.github.brechanbech/sec-mcp`](https://github.com/brechanbech/sec-mcp) | [sec-mcp](https://crates.io/crates/sec-mcp) | `cargo` | 0 | Rust MCP server for SEC EDGAR data — company filings, financial concepts, and company info |
 | 9 | 2026-07-19 | [`io.github.brechanbech/xojo-mcp`](https://github.com/brechanbech/xojo-mcp) | [xojo-mcp](https://crates.io/crates/xojo-mcp) | `cargo` | 0 | MCP server for controlling the Xojo IDE on macOS |
 | 10 | 2026-07-20 | [`io.github.patchloom/patchloom`](https://github.com/patchloom/patchloom) | [patchloom](https://crates.io/crates/patchloom) | `cargo` + `npm` | 20 | Agent-safe structured edits: JSON/YAML/TOML/md/AST, dry-run, batch/tx. Not a filesystem MCP. |
-| 11 | 2026-07-28 | [`io.github.lacs-project/sysknife`](https://github.com/lacs-project/sysknife) | [sysknife-cli](https://crates.io/crates/sysknife-cli) | `cargo` | 104 | Administers Linux via typed, approval-gated actions with an Ed25519-signed audit trail. |
+| 11 | 2026-07-28 | [`io.github.lacs-project/sysknife`](https://github.com/lacs-project/sysknife) | [sysknife-cli](https://crates.io/crates/sysknife-cli) | `cargo` | 125 | Administers Linux via typed, approval-gated actions with an Ed25519-signed audit trail. |
 | 12 | 2026-07-28 | [`io.github.protostatis/unbrowser`](https://github.com/protostatis/unbrowser) | [unbrowser](https://crates.io/crates/unbrowser) | `cargo` + `pypi` | 17 | Chrome-free MCP web access for agents with low-token page maps and browser escalation hints. |
 | 13 | 2026-07-29 | [`io.github.Wolfe-Jam/mcp-better`](https://github.com/Wolfe-Jam/mcp-better) | [mcp-better](https://crates.io/crates/mcp-better) | `cargo` + `npm` | 2 | AAIF-verified modern MCP setup optimised to the 2026-07-28 model (BETTER textbook). |
 | 14 | 2026-07-29 | [`io.github.klNuno/fast-mcp-ssh`](https://github.com/klNuno/fast-mcp-ssh) | [fast-mcp-ssh](https://crates.io/crates/fast-mcp-ssh) | `cargo` | 5 | SSH, SFTP, PTY shells, host-to-host copies and remote screenshots for AI agents. One Rust binary. |
 | 15 | 2026-07-31 | [`io.github.Mapika/portview`](https://github.com/Mapika/portview) | [portview](https://crates.io/crates/portview) | `cargo` | 61 | See what's on your ports, the processes behind them, and diagnose conflicts and leaks. |
-| 16 | 2026-08-01 | [`io.github.morluto/leantoken`](https://github.com/morluto/leantoken) | [leantoken](https://crates.io/crates/leantoken) | `cargo` | 134 | Token-bounded repository context for coding agents over MCP. |
+| 16 | 2026-08-01 | [`io.github.morluto/leantoken`](https://github.com/morluto/leantoken) | [leantoken](https://crates.io/crates/leantoken) | `cargo` | 139 | Token-bounded repository context for coding agents over MCP. |
 | 17 | 2026-08-02 | [`io.github.smbcloudXYZ/xcrs`](https://github.com/smbcloudXYZ/smbcloud-cli) | [xcrs](https://crates.io/crates/xcrs) | `cargo` | 12 | MCP tools for testing mobile and TV apps on iOS simulators, Android phones, and Apple/Android TV. |
 | 18 | 2026-08-05 | [`io.github.koshak01/tidex6-mcp-local`](https://github.com/koshak01/tidex6) | [tidex6-mcp-local](https://crates.io/crates/tidex6-mcp-local) | `cargo` | 1 | Private USDC/USDT payments on Solana: hidden amounts, unlinkable, optional auditor. |
 | 19 | 2026-08-05 | [`io.github.mahabubul470/gpp`](https://github.com/mahabubul470/gpp) | [gpp-cli](https://crates.io/crates/gpp-cli) | `cargo` | 2 | Project knowledge graph with history-checked belief staleness, changeset proposals, cost reporting |
@@ -104,7 +110,7 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 27 | 2026-08-19 | [`io.github.verivus-oss/sqry`](https://github.com/verivus-oss/sqry) | [sqry-mcp](https://crates.io/crates/sqry-mcp) | `cargo` + `oci` | 31 | AST-based semantic code search: 39 tools over 37 languages. Call tracing and impact analysis. |
 | 28 | 2026-08-21 | [`io.github.tombaldwin/ebman`](https://github.com/tombaldwin/ebman) | [ebman](https://crates.io/crates/ebman) | `cargo` | 1 | MCP server for AWS Elastic Beanstalk: read the fleet; --allow-writes adds two-phase writes. |
 | 29 | 2026-08-23 | [`io.github.nhatvu148/video-transcriber-mcp`](https://github.com/nhatvu148/video-transcriber-mcp-rs) | [video-transcriber-mcp](https://crates.io/crates/video-transcriber-mcp) | `cargo` | 19 | Transcribe videos from 1000+ platforms or local files offline, and search across every transcript |
-| 30 | 2026-08-23 | [`io.github.ojuschugh1/sqz`](https://github.com/ojuschugh1/sqz) | [sqz-mcp](https://crates.io/crates/sqz-mcp) | `cargo` | 673 | Pre-injection context compression for coding agents. Zero LLM calls, zero telemetry, offline-safe. |
+| 30 | 2026-08-23 | [`io.github.ojuschugh1/sqz`](https://github.com/ojuschugh1/sqz) | [sqz-mcp](https://crates.io/crates/sqz-mcp) | `cargo` | 675 | Pre-injection context compression for coding agents. Zero LLM calls, zero telemetry, offline-safe. |
 | 31 | 2026-08-26 | [`io.github.oxyplay/wyd`](https://github.com/oxyplay/wyd) | [wyd](https://crates.io/crates/wyd) | `cargo` | 4 | Local runtime provenance for coding agents. Inspect sessions and explain which one owns a process. |
 | 32 | 2026-08-27 | [`io.github.QAtlasHub/doiget`](https://github.com/QAtlasHub/doiget) | [doiget-cli](https://crates.io/crates/doiget-cli) | `cargo` + `mcpb` | 2 | OA-first paper fetcher: DOIs/arXiv IDs to local PDFs + metadata via Open Access APIs. |
 | 33 | 2026-08-27 | [`io.github.husk-security/husk`](https://github.com/husk-security/husk) | [husk-sec](https://crates.io/crates/husk-sec) | `cargo` + `npm` | 6 | Local-first defensive scanner for vulnerable dependencies, leaked secrets, and risky agent configs |
@@ -131,7 +137,7 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 54 | 2026-09-20 | [`io.github.croviatrust/causari`](https://github.com/croviatrust/causari) | [causari](https://crates.io/crates/causari) | `cargo` | 9 | Records the prompt, model and files an agent declared for a line. It does not prove who typed it. |
 | 55 | 2026-09-21 | [`app.mochify/mochify`](https://github.com/getmochify/mochify-cli) | [mochify](https://crates.io/crates/mochify) | `cargo` | 1 | Image and PDF toolkit: convert to AVIF/WebP/JXL, resize, crop, remove backgrounds, optimize PDFs. |
 | 56 | 2026-09-24 | [`io.github.devops-infinity/ownpg`](https://github.com/devops-infinity/ownpg-releases) | [ownpg](https://crates.io/crates/ownpg) | `cargo` + `mcpb` | 0 | PostgreSQL DBA tools over MCP, scoped to one database and one schema. |
-| 57 | 2026-09-24 | [`io.github.naw103/foremerge`](https://github.com/naw103/foremerge) | [foremerge](https://crates.io/crates/foremerge) | `cargo` | 529 | Coordinate parallel coding agents, above Git |
+| 57 | 2026-09-24 | [`io.github.naw103/foremerge`](https://github.com/naw103/foremerge) | [foremerge](https://crates.io/crates/foremerge) | `cargo` | 532 | Coordinate parallel coding agents, above Git |
 | 58 | 2026-09-26 | [`io.github.damejeras/agentchan`](https://github.com/damejeras/agentchan) | [agentchan](https://crates.io/crates/agentchan) | `cargo` | 0 | Lets one coding agent talk to another: Claude Code, Codex or Grok |
 | 59 | 2026-09-26 | [`io.github.fluxgit-hq/fluxgit-mcp-server`](https://github.com/fluxgit-hq/fluxgit-mcp-server) | [fluxgit-mcp-sidecar](https://crates.io/crates/fluxgit-mcp-sidecar) | `cargo` | 0 | Safety-first Git MCP server: rich read tools plus human-approved FluxGit operation proposals. |
 | 60 | 2026-09-27 | [`io.github.brechanbech/forgejo-mcp-rs`](https://github.com/brechanbech/forgejo-mcp-rs) | [forgejo-mcp-rs](https://crates.io/crates/forgejo-mcp-rs) | `cargo` | 1 | Model Context Protocol server for Forgejo, Codeberg and Gitea, in Rust |
@@ -151,7 +157,7 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 74 | 2026-10-12 | [`io.github.scrapertweeter3-prog/flatrate-math`](https://github.com/scrapertweeter3-prog/mcp-flatratemath) | [flatrate-math](https://crates.io/crates/flatrate-math) | `cargo` | 0 | Benchmark math for flat-rate software subscriptions against a fully loaded senior hire. |
 | 75 | 2026-10-13 | [`io.github.Blackcat-Informatics/purrassist`](https://github.com/Blackcat-Informatics/purrassist) | [purrassist-cli](https://crates.io/crates/purrassist-cli) | `cargo` | 0 | Recovers intent from imperfect AI output: JSON, tool calls, names, paths and Markdown edits. |
 | 76 | 2026-10-14 | [`io.github.est57/echoproof`](https://github.com/est57/echoproof) | [echoproof](https://crates.io/crates/echoproof) | `cargo` | 0 | Replay real HTTP traffic against base and changed builds; flag behavior changes the intent omits. |
-| 77 | 2026-10-14 | [`io.github.leidarljos/ljos`](https://github.com/leidarljos/ljos) | [ljos](https://crates.io/crates/ljos) | `cargo` | 1 | Local memory, a work tracker and a shell-command guard shared by coding agents on one machine. |
+| 77 | 2026-10-14 | [`io.github.leidarljos/ljos`](https://github.com/leidarljos/ljos) | [ljos](https://crates.io/crates/ljos) | `cargo` | 0 | Local memory, a work tracker and a shell-command guard shared by coding runners on one machine. |
 | 78 | 2026-10-15 | [`org.renyi-lang/renyi`](https://github.com/renyi-lang/renyi) | [renyi](https://crates.io/crates/renyi) | `cargo` | 3 | Check, format, run and test Renyi programs; the project map with effects, diffs and chunks. |
 | 79 | 2026-10-17 | [`io.github.arifulislamat/database-mcp-libsql`](https://github.com/arifulislamat/database-mcp) | [database-mcp-rs-libsql](https://crates.io/crates/database-mcp-rs-libsql) | `cargo` + `npm` + `pypi` | 5 | MCP server for libSQL/Turso, local or remote. Read-only by default, row caps, timeouts. |
 | 80 | 2026-10-17 | [`io.github.arifulislamat/database-mcp-mariadb`](https://github.com/arifulislamat/database-mcp) | [database-mcp-rs-mariadb](https://crates.io/crates/database-mcp-rs-mariadb) | `cargo` + `npm` + `pypi` | 5 | MCP server for MariaDB. Read-only by default, row caps, timeouts, secrets never logged. |
@@ -159,26 +165,35 @@ Many Rust MCP servers list another way (npm, an MCP bundle or a container) and d
 | 82 | 2026-10-17 | [`io.github.arifulislamat/database-mcp-postgres`](https://github.com/arifulislamat/database-mcp) | [database-mcp-rs-postgres](https://crates.io/crates/database-mcp-rs-postgres) | `cargo` + `npm` + `pypi` | 5 | MCP server for PostgreSQL. Read-only by default, row caps, timeouts, secrets never logged. |
 | 83 | 2026-10-17 | [`io.github.arifulislamat/database-mcp-sqlite`](https://github.com/arifulislamat/database-mcp) | [database-mcp-rs-sqlite](https://crates.io/crates/database-mcp-rs-sqlite) | `cargo` + `npm` + `pypi` | 5 | MCP server for SQLite databases. Read-only by default, row caps, statement timeouts. |
 | 84 | 2026-10-17 | [`io.github.asanabrial/estigia`](https://github.com/asanabrial/estigia) | [estigia](https://crates.io/crates/estigia) | `cargo` + `npm` | 1 | Guardrails for AI coding agents: verified claims, reviews bound to exact commits, gated merges. |
-| 85 | 2026-10-17 | [`io.github.fatsearch/fats`](https://github.com/fatsearch/fatsearch) | [fatsearch](https://crates.io/crates/fatsearch) | `cargo` | 50 | Web pages, PDFs and documents as small, clean, cached Markdown for AI agents |
+| 85 | 2026-10-17 | [`io.github.fatsearch/fats`](https://github.com/fatsearch/fatsearch) | [fatsearch](https://crates.io/crates/fatsearch) | `cargo` | 51 | Web pages, PDFs and documents as small, clean, cached Markdown for AI agents |
 | 86 | 2026-10-18 | [`io.github.4DA-Systems/victauri`](https://github.com/4DA-Systems/victauri) | [victauri-cli](https://crates.io/crates/victauri-cli) | `cargo` | 4 | In-process MCP server for Tauri apps: DOM, IPC with bodies, Rust state, SQLite. Debug builds only. |
 | 87 | 2026-10-18 | [`io.github.Ezra-Black/rekey`](https://github.com/Ezra-Black/rekey) | [rekey](https://crates.io/crates/rekey) | `cargo` | 2 | Rotate API keys across AWS, GitLab, Cloudflare, OpenAI & more. Secrets never reach the model. |
 | 88 | 2026-10-19 | [`io.github.G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | [moodle-mcp](https://crates.io/crates/moodle-mcp) | `cargo` | 27 | Moodle LMS for LLM agents — courses, assignments, files, submissions in one static binary. |
-| 89 | 2026-10-20 | [`io.github.AppachiTech/suvadu`](https://github.com/AppachiTech/suvadu) | [suvadu](https://crates.io/crates/suvadu) | `cargo` | 124 | Local shell history and AI agent sessions over MCP: search commands, failures, risk and git changes |
+| 89 | 2026-10-20 | [`io.github.AppachiTech/suvadu`](https://github.com/AppachiTech/suvadu) | [suvadu](https://crates.io/crates/suvadu) | `cargo` | 125 | Local shell history and AI agent sessions over MCP: search commands, failures, risk and git changes |
 | 90 | 2026-10-20 | [`io.github.emmanuel-defreitas/gpui-agentation`](https://github.com/emmanuel-defreitas/gpui-agentation) | [gpui-agentation](https://crates.io/crates/gpui-agentation) | `cargo` | 3 | Read and manage development annotations from a local GPUI app. |
 | 91 | 2026-10-20 | [`io.github.marcomq/mq-bridge`](https://github.com/marcomq/mq-bridge) | [mq-bridge-app](https://crates.io/crates/mq-bridge-app) | `cargo` + `oci` | 25 | Move data between 15+ databases, queues and files at high throughput, without it entering context |
 | 92 | 2026-10-23 | [`io.github.PSCatLabs/pscat`](https://github.com/PSCatLabs/pscat) | [pscat](https://crates.io/crates/pscat) | `cargo` | 2 | Render and debug PostScript to PNG, SVG or PDF, write handwritten notes, and make generative art |
 | 93 | 2026-10-23 | [`io.github.abelreqma/oxiploitability-mcp`](https://github.com/abelreqma/oxiploitability-mcp) | [oxiploitability-mcp](https://crates.io/crates/oxiploitability-mcp) | `cargo` | 0 | Sourced, evidence-aware CVE research for CVEs, products, SBOMs and images via NVD, EPSS, KEV, OSV. |
 | 94 | 2026-10-23 | [`io.github.triplexanalytics/triplex-mcp`](https://github.com/triplexanalytics/triplex) | [triplex-mcp](https://crates.io/crates/triplex-mcp) | `cargo` | 0 | Infer and validate schema contracts on local CSV, TSV and JSON Lines files. No network access. |
-| 95 | 2026-10-24 | [`io.github.MikkoParkkola/nab`](https://github.com/MikkoParkkola/nab) | [nab](https://crates.io/crates/nab) | `cargo` | 17 | Token-optimized HTTP client for LLMs: fetches any URL as clean markdown. CLI and MCP server. |
+| 95 | 2026-10-24 | [`io.github.MikkoParkkola/nab`](https://github.com/MikkoParkkola/nab) | [nab](https://crates.io/crates/nab) | `cargo` | 19 | Token-optimized HTTP client for LLMs: fetches any URL as clean markdown. CLI and MCP server. |
 | 96 | 2026-10-24 | [`io.github.oxygenframe/oxframe`](https://github.com/oxygenframe/oxframe-cli) | [oxframe-cli](https://crates.io/crates/oxframe-cli) | `cargo` | 2 | Make videos from code: check scenes frame by frame, inspect nodes, render a frame, search the docs. |
-| 97 | 2026-10-24 | [`io.github.semlith/semlith`](https://github.com/semlith/semlith) | [semlith](https://crates.io/crates/semlith) | `cargo` | 7 | Local search over your code and documents for AI agents. |
+| 97 | 2026-10-24 | [`io.github.semlith/semlith`](https://github.com/semlith/semlith) | [semlith](https://crates.io/crates/semlith) | `cargo` | 8 | Local search over your code and documents for AI agents. |
 | 98 | 2026-10-26 | [`io.github.godot-pty/gpty`](https://github.com/godot-pty/gpty) | [gpty](https://crates.io/crates/gpty) | `cargo` | 78 | Spawn panes, inject input and read output in a tiling terminal workspace |
 | 99 | 2026-10-27 | [`io.github.devops-infinity/ownsearch`](https://github.com/devops-infinity/ownsearch) | [ownsearch](https://crates.io/crates/ownsearch) | `cargo` + `npm` | 0 | Quality-ranked SearXNG search over MCP with local fleet state, scoring, and merged results. |
-| 100 | 2026-10-27 | [`io.github.emanuele-em/kanzo`](https://github.com/emanuele-em/kanzo) | [kanzo](https://crates.io/crates/kanzo) | `cargo` | 190 | Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup. |
+| 100 | 2026-10-27 | [`io.github.emanuele-em/kanzo`](https://github.com/emanuele-em/kanzo) | [kanzo](https://crates.io/crates/kanzo) | `cargo` | 615 | Self-hosted kanban for humans and agents. One 4 MB binary, starts in 2 ms, zero setup. |
 | 101 | 2026-10-27 | [`io.github.ermoluk/mcp-warden`](https://github.com/ermoluk/mcp-warden) | [mcp-warden](https://crates.io/crates/mcp-warden) | `cargo` + `mcpb` + `npm` | 10 | Local credential broker: agents call APIs, SSH and DBs via scoped presets; secrets stay in keychain. |
-| 102 | 2026-10-29 | [`io.github.kinkirill/bevy-manual-mcp`](https://github.com/kinkirill/bevy_manual_mcp) | [bevy-manual-mcp](https://crates.io/crates/bevy-manual-mcp) | `cargo` | 16 | Version-accurate Bevy API docs, Book, migration guides and examples for AI agents. |
+| 102 | 2026-10-29 | [`io.github.kinkirill/bevy-manual-mcp`](https://github.com/kinkirill/bevy_manual_mcp) | [bevy-manual-mcp](https://crates.io/crates/bevy-manual-mcp) | `cargo` | 17 | Version-accurate Bevy API docs, Book, migration guides and examples for AI agents. |
 | 103 | 2026-10-29 | `science.transaction.wai/quantum` | [wai-quantum-cli](https://crates.io/crates/wai-quantum-cli) | `cargo` |  | OpenQASM 3 programs run, checked against their intent and signed on this machine. |
 | 104 | 2026-10-30 | [`io.github.dot-ASH/umbriel-mcp`](https://github.com/dot-ASH/umbriel-mcp) | [umbriel-mcp](https://crates.io/crates/umbriel-mcp) | `cargo` | 0 | Control the Umbriel Wayland compositor: windows, workspaces, input, screenshots, clipboard. |
+| 105 | 2026-10-30 | [`io.github.melihbirim/pipetable`](https://github.com/melihbirim/pipetable) | [pipetable](https://crates.io/crates/pipetable) | `cargo` | 5 | Local data runtime for AI agents: query CSV, Excel, Parquet and JSON files with DuckDB SQL. |
+| 106 | 2026-10-31 | [`io.github.agzyazilim/rust-mcp`](https://github.com/agzyazilim/rust-mcp) | [agz-rust-mcp](https://crates.io/crates/agz-rust-mcp) | `cargo` | 2 | Rust development tools for offline context, compiler diagnostics, focused tests and Cargo execution. |
+| 107 | 2026-11-01 | [`io.github.DeSchaker/forthling`](https://github.com/DeSchaker/forthling) | [forthling-mcp](https://crates.io/crates/forthling-mcp) | `cargo` + `mcpb` | 0 | Run Forth-2012 in a sandbox: definitions stay between calls, each result shows the stacks. |
+| 108 | 2026-11-01 | [`io.github.Wolfe-Jam/rust-mcp-preflight`](https://github.com/Wolfe-Jam/rust-mcp-preflight) | [rust-mcp-preflight](https://crates.io/crates/rust-mcp-preflight) | `cargo` | 0 | Check an MCP Registry listing before you publish: README mcp-name line, server.json, name. |
+| 109 | 2026-11-01 | [`io.github.bug-ops/mcpls`](https://github.com/bug-ops/mcpls) | [mcpls](https://crates.io/crates/mcpls) | `cargo` | 81 | Universal MCP to LSP bridge exposing language server code intelligence as MCP tools |
+| 110 | 2026-11-01 | [`io.github.yarenty/emperor-folder`](https://github.com/yarenty/emperor-folder) | [emperor-folder](https://crates.io/crates/emperor-folder) | `cargo` | 0 | List, read, search and (opt-in) write, edit and move files inside one folder, never outside it. |
+| 111 | 2026-11-01 | [`io.github.yarenty/emperor-mail`](https://github.com/yarenty/emperor-mail) | [emperor-mail](https://crates.io/crates/emperor-mail) | `cargo` | 0 | Email over IMAP and SMTP: search, read messages and attachments, draft, and send when allowed |
+| 112 | 2026-11-01 | [`io.github.yarenty/emperor-pdf`](https://github.com/yarenty/emperor-pdf) | [emperor-pdf](https://crates.io/crates/emperor-pdf) | `cargo` | 0 | Read, search and render the PDFs in one folder; merge, extract and create them from Markdown. |
+| 113 | 2026-11-01 | [`io.github.yarenty/emperor-vikunja`](https://github.com/yarenty/emperor-vikunja) | [emperor-vikunja](https://crates.io/crates/emperor-vikunja) | `cargo` | 0 | Vikunja tasks for MCP clients: list, read, create and update tasks, comment, list projects. |
 
 ## Deprecated (2)
 
@@ -189,12 +204,12 @@ Marked deprecated in the registry, so not counted above.
 
 ## Method
 
-- **Source:** the registry API (`/v0/servers?version=latest`, then `/v0/servers/{name}/versions` for the first version with a cargo package). Owner and stars from the GitHub API. Snapshot taken 2026-10-30.
+- **Source:** the registry API (`/v0/servers?version=latest`, then `/v0/servers/{name}/versions` for the first version with a cargo package). Owner and stars from the GitHub API. Snapshot taken 2026-11-02.
 - **Counted:** active servers whose latest version lists a package with `registryType: cargo`. Servers that list only `npm`, `pypi`, `oci` or `mcpb` are not counted, whatever language they are written in. A server that listed cargo in an earlier version but not its latest is not counted.
 - **Dates** are the registry's `publishedAt`, in UTC.
 - **What it does** is each author's own description from the registry, unedited.
 - **Stars** are shown, not ranked. Nothing here judges a server.
-- **Data:** [`data/2026-10-30.json`](data/2026-10-30.json) and [`data/2026-10-30.csv`](data/2026-10-30.csv). One snapshot per day; earlier days are never overwritten.
+- **Data:** [`data/2026-11-02.json`](data/2026-11-02.json) and [`data/2026-11-02.csv`](data/2026-11-02.csv). One snapshot per day; earlier days are never overwritten.
 - **Run it yourself:** `python3 src/census.py` (Python 3, standard library; `gh` for owner and stars). One crawl a week (Sundays, 23:00 UTC, by [a GitHub Action](.github/workflows/weekly.yml)), with the User-Agent `rust-mcp-census`.
 - Cargo support in the registry: [modelcontextprotocol/registry#1207](https://github.com/modelcontextprotocol/registry/pull/1207).
 
