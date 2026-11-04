@@ -33,9 +33,9 @@ stack:
   search: slotignored
   storage: slotignored
 human_context:
-  who: ""
+  who: Rust devs, crate builders, AAIF
   what: A weekly count of MCP Registry servers that list a cargo package, with each server's first cargo date, owner, packages and description.
-  why: ""
+  why: Did the cargo work, kept monitoring it, it grew into the Census
   where: This repo's README.md, with daily snapshots in data/
   when: Weekly, Mondays 06:00 UTC (.github/workflows/weekly.yml)
   how: src/census.py reads the MCP Registry API and the GitHub API, writes a snapshot to data/ and rewrites README.md; the weekly Action opens a census/<date> PR, and merging it publishes the count.
