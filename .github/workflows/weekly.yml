@@ -33,5 +33,7 @@ jobs:
           git add README.md data/
           git commit -m "Census: $date"
           git push -f origin "census/$date"
+          # Then on the PR: "Approve workflows to run" (its required actionlint
+          # check waits for a maintainer), then squash and merge.
           gh pr create --base main --head "census/$date" --title "Census: $date" \
             --body "$(cat summary.txt). Merge to publish this week's count."
