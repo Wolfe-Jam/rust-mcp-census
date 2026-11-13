@@ -4,8 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
-  # weekly.yml starts it on the census branch: a PR opened with GITHUB_TOKEN
-  # starts no pull_request run, so the required check would never report.
+  # The weekly census PR is opened with GITHUB_TOKEN: its pull_request run
+  # waits until a maintainer clicks "Approve workflows to run" on the PR.
+  # By hand: gh workflow run ci.yml --ref <branch>
   workflow_dispatch:
 
 permissions:

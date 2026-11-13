@@ -6,7 +6,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: write  # start ci.yml on the census branch
   contents: write
   pull-requests: write
 
@@ -36,6 +35,3 @@ jobs:
           git push -f origin "census/$date"
           gh pr create --base main --head "census/$date" --title "Census: $date" \
             --body "$(cat summary.txt). Merge to publish this week's count."
-          # A PR opened with GITHUB_TOKEN starts no workflows; a dispatch does.
-          # This runs the required actionlint check on the PR's commit.
-          gh workflow run ci.yml --ref "census/$date"
